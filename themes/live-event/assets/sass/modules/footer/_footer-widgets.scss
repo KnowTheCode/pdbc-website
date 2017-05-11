@@ -1,0 +1,94 @@
+//
+// Footer widgets
+//=======================
+
+.footer-widgets {
+  background-color: $darkBlue;
+  color: $white;
+  padding: 0;
+
+  font-size: 90%;
+
+  .widget {
+    margin-bottom: 0;
+  }
+
+  .widgettitle {
+    @include rem( font-size, 18px );
+    letter-spacing: 0.8px;
+    margin: 0 0 20px;
+  }
+
+  .entry {
+    background: transparent;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 6px;
+    word-wrap: break-word;
+  }
+
+  .social-links {
+    margin: 40px 0 0;
+  }
+
+  .topic--links {
+    a {
+      width: 100%;
+      text-align: left;
+      padding: 5px;
+    }
+  }
+}
+
+.footer-widgets-2,
+.footer-widgets-3 {
+  .widgettitle {
+    color: $lightOlive;
+    font-weight: 500;
+  }
+
+  a {
+    color: $white;
+    &:hover, &:focus, &:active {
+      color: $orange;
+      border-bottom: 0;
+    }
+  }
+}
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+  padding: 40px 15px;
+
+  @media screen and (min-width: 768px) {
+    &:nth-child(even) {
+      @include omega();
+      clear: right;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @include span-columns(6);
+  }
+
+  @media screen and (min-width: 1025px) {
+    @include span-columns(4);
+  }
+
+}
+.footer-widgets-3 {
+  @include omega();
+  clear: right;
+}
+
+.footer-widgets-1 {
+  background-color: $lightOlive;
+  color: $darkBlue;
+
+  .fullpage-optin--open-button {
+    float: none;
+  }
+}

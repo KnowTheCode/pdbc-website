@@ -1,0 +1,18 @@
+//
+// Profile Panel
+//=============================
+
+.faculty--profile-panel {
+  display: block;
+  flex-direction: column;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  background-color: $lightOlive;
+  z-index: 55;
+  padding: 30px;
+  margin: 30px 0;
+}
+
+.profile-close--button {
+  float: right;
+}

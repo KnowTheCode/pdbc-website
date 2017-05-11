@@ -1,0 +1,51 @@
+//
+// Bootcamp Sections
+//=========================
+
+.section,
+.bootcamp-section {
+
+  padding: 80px 0;
+
+  &.--background-white {
+    background-color: $white;
+  }
+
+  &.--background-olive {
+    background-color: $lightOlive;
+  }
+
+  &.--background-blue {
+    background-color: $darkBlue;
+    h2, h3, h4, h5, h6, p, & {
+      color: $white;
+    }
+  }
+
+  &.--callout, &.--background-list {
+    h1, h2, h3, h4, h5, p, & {
+      font-weight: 300;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  &--header {
+    margin-top: 40px;
+  }
+}
+
+
+.bootcamp-focus--header {
+  @media screen and (max-width: 766px) {
+    span {
+      display: block;
+    }
+  }
+}
+

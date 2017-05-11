@@ -1,0 +1,49 @@
+.faculty--card {
+  .faculty-avatar.aligncenter {
+    margin-bottom: 0;
+  }
+}
+
+.faculty, .teacher {
+
+  &-avatar {
+    width: 100%;
+    height: auto;
+  }
+
+  &-avatar-overlay {
+    transition: opacity .5s;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background: rgba( $lightOlive, 0.8 );
+    line-height: 220px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    height: 220px;
+
+    .faculty--block:hover &, .teacher:hover & {
+      opacity: 1;
+    }
+
+    .fa {
+      @include rem(font-size, 40px);
+      color: $white;
+      text-align: center;
+    }
+
+  }
+}
+
+.teacher-bio .teacher-avatar,
+.faculty_profile-picture,
+.faculty--popup .faculty-avatar {
+  border-radius: 50%;
+  border: 10px solid $background--accent-color;
+  box-shadow: $pop--box-shadow;
+  padding: 6px;
+  margin: 0 0 30px;
+}

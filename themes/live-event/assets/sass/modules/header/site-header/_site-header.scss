@@ -1,0 +1,13 @@
+//
+// Site Header
+//====================
+
+.site-header {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+
+  .wrap, & {
+    width: 100%;
+  }
+}

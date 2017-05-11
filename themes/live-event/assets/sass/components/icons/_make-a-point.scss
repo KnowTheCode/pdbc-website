@@ -1,0 +1,18 @@
+.make-a-point--icon {
+  font-size: 200%;
+  float: left;
+  display: block;
+  margin: 10px 15px 15px 0;
+  color: $orange;
+}
+
+.highlight {
+  .fa.make-a-point--icon {
+    @include rem( font-size, 40px );
+    padding-left: 10px;
+
+    @media screen and (min-width: 1025px) {
+      @include rem( font-size, 50px );
+    }
+  }
+}

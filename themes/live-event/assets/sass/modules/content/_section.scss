@@ -1,0 +1,23 @@
+.entry--section {
+  margin: 40px 0;
+  position: relative;
+
+  &--linkable {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+  }
+}
+
+.page-section {
+  margin: 40px 0;
+
+  &--header {
+    background-color: #f2f2f2;
+    padding: 20px 10px;
+    border-top: 3px dotted $gray;
+    border-bottom: 3px dotted $gray;
+    margin-bottom: 40px;
+  }
+}
+

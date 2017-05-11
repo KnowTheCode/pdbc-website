@@ -1,0 +1,66 @@
+.cta-qualifier {
+  position: relative;
+  margin: 40px 0;
+  overflow: hidden;
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.cta-qualifier__block {
+  text-align: center;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin: 0;
+    float: left;
+
+    &.--width-25p {
+      width: 25%;
+    }
+
+    &.--width-33p {
+      width: 33%;
+    }
+
+    &.--width-66p {
+      width: 66%;
+    }
+  }
+
+  &.--background-olive {
+    background-color: $lightOlive;
+  }
+
+  &.--background-red {
+    background-color: $red;
+  }
+
+  &.--background-blue {
+    background-color: $darkBlue;
+  }
+
+  &.--background-green {
+    background-color: $green;
+  }
+
+  &.--background{
+    &-red, &-blue, &-green {
+      color: $white;
+    }
+  }
+}
+
+.cta-qualifier__number {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.cta-qualifier__increment {
+  display: block;
+  font-size: 28px;
+}

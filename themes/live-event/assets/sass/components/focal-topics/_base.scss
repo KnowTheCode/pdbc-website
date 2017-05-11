@@ -1,0 +1,109 @@
+//
+// Track colors
+//===========================
+
+.bootcamp-focus--header {
+  line-height: 2;
+  margin: 40px 0;
+  font-weight: 300;
+}
+
+.--color {
+
+  &-technical, &-business, &-project-management {
+    color: $darkBlue;
+    padding: 5px;
+  }
+  &-technical {
+    background-color: $colorTechnical;
+    color: $white;
+  }
+
+  &-business {
+    background-color: $colorBusiness;
+  }
+
+  &-project-management {
+    background-color: $colorPM;
+  }
+}
+
+.highlight {
+  padding: 5px;
+  background-color: $light-background-color;
+}
+
+a.highlight {
+  border-bottom: 0;
+
+  &:hover {
+    background-color: $white;
+    color: $darkBlue;
+  }
+}
+
+.--technical,
+.boxed-grid--callout.--technical,
+.highlight.--technical {
+  background-color: $colorTechnical;
+
+  h1,h2,h3,h4,h5,h6, p, .fa, .fa.make-a-point--icon, & {
+    color: $white;
+  }
+}
+
+.--business,
+.boxed-grid--callout.--business,
+.highlight.--business {
+  background-color: $colorBusiness;
+
+  h1,h2,h3,h4,h5,h6, p, .fa, .fa.make-a-point--icon, & {
+    color: $darkBlue;
+  }
+}
+
+.--project-management,
+.boxed-grid--callout.--project-management,
+.highlight.--project-management {
+  background-color: $colorPM;
+
+  h1,h2,h3,h4,h5,h6, p, .fa, .fa.make-a-point--icon, & {
+    color: $darkBlue;
+  }
+}
+
+a, a:hover {
+  &.highlight {
+    &.--technical {
+      border: 1px solid $colorTechnical;
+    }
+
+    &.--project-management {
+      border: 1px solid $colorPM;
+    }
+
+    &.--business {
+      border: 1px solid $colorBusiness;
+    }
+  }
+}
+
+
+  a.hover.highlight {
+    &.--technical, &.--project-management, &.--business {
+      h1, h2, h3, h4, h5, h6, p, .fa, .fa.make-a-point--icon, & {
+        color: $darkBlue;
+      }
+    }
+  }
+
+  a.highlight {
+    h1, h2, h3, h4, h5, h6, p, .fa, .fa.make-a-point--icon, & {
+      font-weight: 400;
+    }
+
+    &.--pop {
+      box-shadow: $pop--box-shadow;
+    }
+  }
+

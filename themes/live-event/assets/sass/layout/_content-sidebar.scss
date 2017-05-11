@@ -1,0 +1,38 @@
+.content-sidebar,
+.sidebar-content {
+
+  .content, .sidebar {
+    width: 100%;
+  }
+  @include media(480px) {
+    .content {
+      width: 65%;
+    }
+
+    .sidebar {
+      width: 30%;
+    }
+  }
+}
+
+@include media(480px) {
+  .content-sidebar {
+    .content {
+      float: left;
+    }
+
+    .sidebar {
+      float: right;
+    }
+  }
+
+  .sidebar-content {
+    .content {
+      float: right;
+    }
+
+    .sidebar {
+      float: left;
+    }
+  }
+}

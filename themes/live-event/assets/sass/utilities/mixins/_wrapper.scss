@@ -1,0 +1,30 @@
+//
+// Wrapper Mixin
+//==================================
+
+@mixin wrapper() {
+  margin: 0 auto;
+  padding: 0 5%;
+  max-width: 100%;
+  word-wrap: break-word;
+
+  @media screen and (min-width: $header-fixed--min-width) and (max-width: $medium-gutter--min-width -  1px) {
+    padding: 0 $right-gutter 0 $left-gutter;
+  }
+
+  @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
+    padding: 0 $right-gutter--medium 0 $left-gutter--medium;
+  }
+
+  @media screen and (min-width: $large-gutter--min-width) {
+    padding: 0;
+  }
+
+  @media screen and (min-width: $large-gutter--min-width) and (max-width: $large-gutter--max-width) {
+    max-width: $max-width - 100px;
+  }
+
+  @media screen and (min-width: $huge-gutter--min-width) {
+    max-width: $max-width;
+  }
+}

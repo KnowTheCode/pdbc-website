@@ -1,0 +1,15 @@
+//
+// Titles
+//=======================
+
+.entry-title {
+  margin-bottom: 0;
+
+  a {
+    border: 0;
+    color: $darkBlue;
+    &:hover, &:focus, &:active {
+      color: $orange;
+    }
+  }
+}

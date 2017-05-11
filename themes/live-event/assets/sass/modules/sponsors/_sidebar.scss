@@ -1,0 +1,59 @@
+.sidebar .sponsors--list {
+  overflow: hidden;
+  @include outer-container;
+  @include display(flex);
+  @include flex-wrap(wrap);
+
+  > li, & {
+    list-style-type: none;
+  }
+
+  .sponsor {
+    margin: 0;
+    margin-bottom: 10px;
+
+    // 2 columns
+    @include span-columns(6);
+    @include omega(2n);
+
+    h6 {
+      color: $colorSponsorLevel;
+      @include rem(font-size, 13px);
+
+      @include media(1400px) {
+        @include rem(font-size, 15px);
+      }
+
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      border: 2px solid #ececec;
+    }
+
+    .sponsor--logo {
+      border-bottom: none;
+      margin: 0 auto;
+      //width: 150px;
+      //height: 150px;
+      //background-color: #f2f2f2;
+      //text-align: center;
+      //display: block;
+      //overflow: hidden;
+      //
+      //@include display(flex);
+      //@include flex-direction(column);
+      //@include justify-content(center);
+      //text-align: center;
+    }
+
+    //.sponsor--dummy-content {
+    //  width: 150px;
+    //  height: 150px;
+    //  background-color: #f2f2f2;
+    //  text-align: center;
+    //  display: block;
+    //}
+  }
+}

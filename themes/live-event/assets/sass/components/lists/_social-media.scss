@@ -1,0 +1,23 @@
+.social-links {
+  margin: 0 0 30px;
+
+  .entry-content &,
+  .entry-content & li, & {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  .fa, & {
+    font-size: 150%;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 5%;
+  }
+
+  a {
+    border-bottom: 0;
+  }
+
+}

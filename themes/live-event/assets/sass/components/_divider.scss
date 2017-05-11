@@ -1,0 +1,41 @@
+
+.divider {
+  width: 50px;
+  text-align: left;
+  display: block;
+  border: 0;
+  height: 3px;
+  border-top: 3px solid $green;
+
+  margin: 20px 0;
+  -webkit-margin-before: 20px;
+  -webkit-margin-after: 20px;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+
+  &.--dotted {
+    border-style: dotted;
+  }
+
+  &.--w100px {
+    width: 100px;
+  }
+
+  &.--border-color {
+    &-blue {
+      border-color: $darkBlue;
+    }
+
+    &-orange {
+      border-color: $orange;
+    }
+
+    &-white {
+      border-color: $white;
+    }
+
+    &-olive {
+      border-color: $lightOlive;
+    }
+  }
+}

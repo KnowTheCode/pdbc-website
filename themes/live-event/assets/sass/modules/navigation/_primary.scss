@@ -1,0 +1,44 @@
+/* Primary  Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	text-align: center;
+	margin-top: -50px;
+
+	@media screen and (min-width: 1025px) {
+		margin-top: 0;
+	}
+
+	.wrap {
+		padding: 0;
+		position: relative;
+	}
+
+	a {
+		color: $darkBlue;
+	}
+
+	a:hover,
+	a:focus,
+	a:active,
+	.current-menu-item > a {
+		color: $orange;
+		border: 0;
+		outline: 0;
+	}
+
+	.menu {
+		position: relative;
+	}
+
+	.menu-item {
+		text-align: left;
+		display: block;
+
+		@media screen and (min-width: 1025px) {
+			@include rem(font-size, 20px);
+			margin-bottom: 12px;
+			text-align: center;
+		}
+	}
+}

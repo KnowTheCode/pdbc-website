@@ -1,0 +1,52 @@
+//
+// Info box
+//====================
+
+.infobox {
+  background-color: #f2f2f2;
+  overflow: hidden;
+  padding: 20px;
+  margin: 30px 0;
+
+  &.--background-light-olive {
+    background-color: $lightOlive;
+  }
+
+  &.reminder {
+    background-color: $green;
+  }
+
+  &.alert {
+    background-color: $red;
+  }
+
+  &.warning {
+    background-color: $yellow;
+  }
+
+  &.info {
+    background-color: $darkBlue;
+  }
+
+  &.--technical {
+    background-color: $colorTechnical;
+  }
+
+  &.--business {
+    background-color: $colorBusiness;
+  }
+
+  &.--project-management {
+    background-color: $colorPM;
+  }
+
+  &.reminder, &.alert, &.info, &.--technical {
+    h1, h2, h3, h4, h5, p, & {
+      color: $white;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

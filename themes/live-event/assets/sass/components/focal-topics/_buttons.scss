@@ -1,0 +1,44 @@
+
+.button,
+a.button,
+.entry-content a.button {
+  &.--technical,
+  &.--business,
+  &.--project-management {
+    color: $darkBlue;
+
+    &:hover {
+      border-color: $darkBlue;
+      background-color: $darkBlue;
+    }
+  }
+
+  &.--technical {
+    border-color: $colorTechnical;
+    background-color: $colorTechnical;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $colorTechnical;
+    }
+  }
+
+  &.--business {
+    border-color: $colorBusiness;
+    background-color: $colorBusiness;
+
+    &:hover {
+      color: $colorBusiness;
+    }
+  }
+
+  &.--project-management {
+    border-color: $colorPM;
+    background-color: $colorPM;
+
+    &:hover {
+      color: $colorPM;
+    }
+  }
+}

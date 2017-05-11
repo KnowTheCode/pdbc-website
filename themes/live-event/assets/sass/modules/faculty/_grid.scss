@@ -1,0 +1,13 @@
+.faculty--grid {
+  overflow: hidden;
+
+  @include outer-container;
+  @include display(flex);
+  @include flex-wrap(wrap);
+
+  .entry-content &, &, .entry-content & > li {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}

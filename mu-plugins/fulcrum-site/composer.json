@@ -1,0 +1,28 @@
+{
+    "name" 			: "KnowTheCode/fulcrum-site",
+    "description" 	: "Know the Code's Site Specific Plugin",
+    "type"          : "project",
+    "keywords" 		: ["wordpress", "wp", "plugin"],
+    "homepage" 		: "https://KnowTheCode.io",
+    "license" 		: "GPL-2.0+",
+    "authors": [
+        {
+            "name" 	: "hellofromTonya",
+            "email" : "hellofromtonya@KnowTheCode.io"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0"
+    },
+    "require-dev": {},
+    "autoload" : {},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "vendor-dir": "assets/vendor"
+    },
+    "minimum-stability": "dev"
+}

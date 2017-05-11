@@ -1,0 +1,28 @@
+.faculty-info,
+.teacher-info {
+  display: block;
+  border-top: 0;
+  padding: 15px 7px;
+
+  .faculty-name,
+  .teacher-name {
+    @include rem( font-size, 18px );
+    text-align: left;
+
+    @include media(768px) {
+      @include rem( font-size, 20px );
+    }
+
+    @include media(1200px) {
+      @include rem( font-size, 24px );
+    }
+  }
+
+  .faculty-byline,
+  .teacher-byline {
+    @include rem(font-size, 13px);
+    line-height: 1.25;
+    color: #888;
+    font-weight: 400;
+  }
+}

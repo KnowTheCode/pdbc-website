@@ -1,0 +1,49 @@
+//
+// Widths
+//==================================
+
+$max-width: 1280px;
+
+$base-wrap-max-width: 768px;
+$wrap-max-width-medium: 960px;
+$wrap-max-width-large: $max-width;
+
+$headerHeight: 98px;
+
+//==================
+// Logo dimensions
+//==================
+
+$logo--width: 250px !default;
+$logo--height: 250px !default;
+
+$full-logo--width: 127px !default;
+$full-logo--height: 515px !default;
+
+$logo--base-width: $logo--width * 0.2;
+$logo--base-height: $logo--height * 0.2;
+
+$logo--medium-width: $full-logo--width * 0.6;
+$logo--medium-height: $full-logo--height * 0.6;
+
+$logo--large-width: $full-logo--width * 0.8;
+$logo--large-height: $full-logo--height * 0.8;
+
+//=====================
+// Hamburger dimension
+//=====================
+$hamburger--width: 60px;
+$hamburger--height: 90px;
+
+
+//=====================
+// Gutters
+//=====================
+
+$left-gutter: $logo--base-width;
+$left-gutter--medium: $logo--medium-width + 40px;
+$left-gutter--large: $logo--large-width + 20px;
+
+$right-gutter: $hamburger--width + 10px;
+$right-gutter--medium: $hamburger--width + 20px;
+$right-gutter--large: $hamburger--width + 10px;

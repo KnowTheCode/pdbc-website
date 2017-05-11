@@ -1,0 +1,64 @@
+/* Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+  background: $comments-background-color;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.comment-respond {
+  input[type="email"],
+  input[type="text"],
+  input[type="url"] {
+    width: 50%;
+  }
+
+  label {
+    display: block;
+    margin-right: 12px;
+  }
+}
+
+.entry-comments ul.children {
+  margin-left: 40px;
+}
+
+.comment-list,
+.ping-list {
+  li {
+    list-style-type: none;
+    margin-top: 24px;
+  }
+}
+
+.comment-meta,
+.entry-comments
+.comment,
+.entry-comments .comment-reply {
+  margin-bottom: 40px;
+}
+
+p.form-submit,
+.entry-comments .children .comment,
+.entry-comments .comment-author {
+  margin-bottom: 0;
+}
+
+.comment .avatar {
+  margin: 0 16px 24px 0;
+}
+
+.form-allowed-tags {
+  font-size: $secondary-font-size;
+}
+
+.comment-time-link {
+  @include rem(font-size, 14px);
+
+  @media screen and (min-width: 1280px) {
+    @include rem(font-size, 16px);
+  }
+}

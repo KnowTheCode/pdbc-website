@@ -1,0 +1,42 @@
+.entry-title,
+.page-title {
+  &.focal-topic {
+    position: relative;
+    margin-left: 30px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 10px;
+      left: 0;
+      bottom: 0;
+      margin-left: -30px;
+    }
+
+    &--technical::before {
+      background-color: $colorTechnical;
+    }
+
+    &--project-management::before {
+      background-color: $colorPM;
+    }
+
+    &--business::before {
+      background-color: $colorBusiness;
+    }
+
+    @media screen and (min-width: 768px) {
+       margin-left: 0;
+    }
+  }
+}
+
+.entry-title.focal-topic::before {
+  top: 5px;
+}

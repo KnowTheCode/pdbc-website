@@ -1,0 +1,53 @@
+//
+// Page Headers
+//=======================
+
+.archive-description,
+.page-header {
+  background-color: $light-background-color;
+  text-align: left;
+  padding: 20px 0;
+
+  @media screen and (min-width: 768px) {
+    background-color: $white;
+    background-image: linear-gradient(rgba(255,255,255, 0.5) 100%, $white),
+        url(#{$image--path}/profitable-developer-bootcamp-hero.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+  }
+
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 60px;
+  }
+
+  .wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      padding-top: 110px;
+      padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1199px) {
+      padding-top: 120px;
+      padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 130px;
+      padding-bottom: 100px;
+    }
+  }
+}

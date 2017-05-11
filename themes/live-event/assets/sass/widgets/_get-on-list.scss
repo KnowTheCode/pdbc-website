@@ -1,0 +1,49 @@
+.after-entry {
+  background-color: $lightOlive;
+  padding: 30px 20px;
+
+  input {
+    border: 0;
+  }
+
+
+  @media screen and (min-width: 1024px) {
+
+    .get-on-list {
+
+      &--left-panel, &--right-panel {
+        width: 48%;
+      }
+
+      &--left-panel {
+        float: left;
+      }
+
+      &--right-panel {
+        float: right;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+.get-on-list--form {
+  margin: 30px 0;
+
+  .widget & {
+    margin: 0;
+  }
+
+  label {
+    display: none;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+}

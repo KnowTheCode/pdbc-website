@@ -1,0 +1,28 @@
+//
+// Scroll Up
+//===============================
+
+.scrollup {
+  z-index: 99999;
+  border-bottom: none;
+  background-color: $lightOlive;
+  color: $darkBlue;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  @include media($small-screen-up) {
+    &.active {
+      display: block;
+    }
+  }
+
+  .fa {
+    @include rem( font-size, 40px );
+  }
+
+  &:hover {
+    color: $orange;
+  }
+}

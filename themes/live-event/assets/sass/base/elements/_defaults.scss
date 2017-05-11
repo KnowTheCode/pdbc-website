@@ -1,0 +1,62 @@
+
+*:focus {
+	outline:none;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.gallery img {
+	@include transition( all 0.1s ease-in-out );
+}
+
+::-moz-selection {
+	background: $black;
+	color: $white;
+}
+
+::selection {
+	background: $black;
+	color: $white;
+}
+
+a {
+	color: $link--color;
+	border-bottom: 1px dotted;
+	font-weight: 700;
+	text-decoration: none;
+	word-wrap: break-word;
+	img {
+		margin-bottom: -4px;
+	}
+
+	&:hover, &:focus {
+		color: $link--hover-color;
+	}
+}
+
+p {
+	margin: 0 0 24px;
+	padding: 0;
+}
+
+strong {
+	font-weight: 700;
+}
+
+pre {
+	background: lighten($black, 11);
+	color: lighten($black, 79);
+	overflow: scroll;
+	padding: 0 20px;
+	white-space: pre;
+}
+
+cite {
+	font-style: italic;
+	font-weight: 700;
+}

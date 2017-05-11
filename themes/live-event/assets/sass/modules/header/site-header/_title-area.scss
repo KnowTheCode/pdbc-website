@@ -1,0 +1,81 @@
+//
+// Title Area
+// - Site Title
+// - Site Description
+//======================================
+
+.title-area, .site-title a {
+  z-index: 99;
+}
+
+.title-area {
+  width: $logo--base-width;
+
+  @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
+    width: $logo--medium-width;
+  }
+
+  @media screen and (min-width: $large-gutter--min-width) {
+    width: $logo--large-width + 10px;
+  }
+}
+
+.site-title {
+  line-height: 1;
+  margin: 0;
+  z-index: 99;
+
+  a {
+    width: $logo--base-width;
+    height: $logo--base-height;
+
+    @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
+      width: $logo--medium-width;
+      height: $logo--medium-height;
+    }
+
+    @media screen and (min-width: $large-gutter--min-width) {
+      width: $logo--large-width;
+      height: $logo--large-height;
+    }
+  }
+
+  a,
+  a:hover, a:focus, a:active {
+    border: 0;
+    outline: none;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+
+    //background-image: url(#{$image--path}/profitable-developer-bootcamp-logo.png);
+
+    background-image: url(#{$image--path}/pdbc-logo.png);
+    background-size: 80%;
+
+    @media screen and (min-width: $medium-gutter--min-width) {
+      background-image: url(#{$image--path}/full-logo-verticial.png);
+    }
+
+    @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
+      background-size: 90%;
+    }
+
+    @media screen and (min-width: $large-gutter--min-width) {
+      background-image: url(#{$image--path}/full-logo-verticial.png);
+      background-size: 100%;
+    }
+
+    margin: 0;
+    text-indent: -9999px;
+  }
+}
+
+.site-description {
+  display: block;
+  height: 0;
+  margin-bottom: 0;
+  text-indent: -9999px;
+}

@@ -1,0 +1,88 @@
+/* Entries
+--------------------------------------------- */
+.entry {
+	background-color: $white;
+	margin-bottom: 40px;
+	padding: 0 0 24px;
+	word-wrap: break-word;
+}
+
+.entry-content {
+	ol, ul {
+		margin: 20px 0px 26px 20px;
+
+		@media screen and (min-width: 768px) {
+			margin-left: 40px;
+		}
+	}
+}
+
+.entry-content {
+	.attachment a,
+	.gallery a {
+		border: 0;
+	}
+
+	ol ol,
+	ul ul,
+	ol ul,
+	ul ol {
+		margin-bottom: 0;
+	}
+
+	ol li,
+	ul li {
+		margin-left: 20px;
+
+		@media screen and (min-width: 480px) {
+			margin-left: 30px;
+		}
+
+		@media screen and (min-width: 768px) {
+			margin-left: 40px;
+		}
+
+		@media screen and (min-width: 1025px) {
+			margin-left: 40px;
+		}
+	}
+
+	ol > li {
+		list-style-type: decimal;
+		&.no-list-style {
+			list-style-type: none;
+		}
+
+	}
+
+	ul > li {
+		list-style-type: disc;
+		&.no-list-style {
+			list-style-type: none;
+		}
+	}
+
+	ul.icons-ul > li {
+		list-style-type: none;
+	}
+
+	ol ol,
+	ul ul,
+	.wp-caption p {
+		margin-bottom: 0;
+	}
+}
+
+// .entry-title font sizing is set in base > elements > headings
+
+@media screen and (max-width: 768px) {
+	body.blog,
+	body.archive {
+		.entry-image-link img {
+			display: block;
+			float: none;
+			margin: 0 0 24px;
+			width: 100%;
+		}
+	}
+}

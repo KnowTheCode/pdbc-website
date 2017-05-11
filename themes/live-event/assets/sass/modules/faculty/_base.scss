@@ -1,0 +1,76 @@
+
+.teacher, .faculty {
+  &-info, &-name, &-byline {
+    display: block;
+  }
+}
+
+// New stuff
+.faculty--block,
+.faculty--profile-panel {
+  position: relative;
+}
+
+.faculty--block {
+  cursor: pointer;
+  transition: opacity .8s ease;
+  float: left;
+}
+
+//
+//.faculty--grid,
+//.teachers {
+//  overflow: hidden;
+//
+//  @include outer-container;
+//  @include display(flex);
+//  @include flex-wrap(wrap);
+//
+//  .entry-content &, &, .entry-content & > li {
+//    list-style-type: none;
+//    margin: 0;
+//    margin-bottom: 15px;
+//  }
+//}
+//
+//.faculty--card,
+//.teacher-card {
+//  border-bottom: 0;
+//  color: $darkBlue;
+//  overflow: hidden;
+//}
+//
+//.faculty--block,
+//.teacher {
+//  background-color: $white;
+//  color: $darkBlue;
+//
+//  position: relative;
+//  min-height: 300px;
+//  width: 100%;
+//  margin-right: 0;
+//
+//  @media screen and (min-width: 480px) and (max-width: 1023px) {
+//    // 2 columns
+//    @include span-columns(6);
+//    margin-right: 0;
+//  }
+//
+//  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+//    // 3 columns
+//    @include span-columns(4);
+//    margin-right: 0;
+//  }
+//
+//  @include media(1200px) {
+//      // 4 columns
+//      @include span-columns(3);
+//      margin-right: 0;
+//  }
+//}
+//
+//.teacher, .faculty {
+//  &-info, &-name, &-byline {
+//    display: block;
+//  }
+//}

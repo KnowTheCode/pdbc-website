@@ -1,0 +1,60 @@
+@media screen and (max-width: $header-fixed--min-width - 1px) {
+  .site-header {
+    height: 100px;
+  }
+}
+
+.title-area, .hamburger-container {
+  height: 94px;
+  @media screen and (min-width: $header-fixed--min-width) {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 100px;
+
+    .admin-bar & {
+      top: 46px;
+    }
+  }
+
+  @media screen and (min-width: 782px) {
+    .admin-bar & {
+      top: 32px;
+    }
+  }
+}
+
+.title-area {
+  left: 0;
+}
+
+.hamburger-container {
+  right: 0;
+}
+
+.site-title,
+.hamburger--button {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+
+  @media screen and (min-width: 1200px) {
+    top: 10px;
+  }
+}
+
+.site-title {
+  left: 0;
+
+  @media screen and (min-width: 1200px) {
+    top: 5px;
+  }
+}
+
+.hamburger--button {
+  right: 0;
+
+  @media screen and (min-width: 1200px) {
+    right: 10px;
+  }
+}

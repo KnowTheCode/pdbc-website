@@ -1,0 +1,41 @@
+.icon--arrow-right {
+  background-position: -78px -10px;
+}
+
+.icon-arrow-left {
+  background-position: -7px -12px;
+}
+
+.icon--arrow-squiggly-right,
+.icon--arrow-squiggly-left {
+  width: 60px;
+  height: 34px;
+}
+
+.icon--arrow-squiggly-right {
+  background-position: -230px -12px;
+}
+
+.icon--arrow-squiggly-left {
+  background-position: -160px -12px;
+}
+
+.icon--bullseye-red {
+  background-position: -7px -80px;
+  width: 125px;
+  height: 100px;
+}
+
+.icon--bullseye-content {
+
+  @media screen and (min-width: 768px) {
+    margin-left: 135px;
+  }
+}
+
+
+.icon--pdbc-icon {
+  background-position: -14px -200px;
+  width: 75px;
+  height: 75px;
+}

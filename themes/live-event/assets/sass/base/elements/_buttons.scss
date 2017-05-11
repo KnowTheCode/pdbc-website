@@ -1,0 +1,81 @@
+//
+// Buttons
+//=======================
+
+.button,
+.entry-content a.button,
+.content-hide-message a.button,
+input[type="submit"] {
+  background-color: $blue;
+  border: 1px solid $blue;
+  border-bottom: 1px solid $blue;
+  color: $white;
+  cursor: pointer;
+  font-size: $base-font-size;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 16px 24px;
+  width: auto;
+  border-radius: 0;
+
+  &.button--pop {
+    box-shadow: $pop--box-shadow;
+  }
+
+  &.button__full-width {
+    width: 100%;
+  }
+
+  &.orange {
+    background-color: $orange;
+    border: 1px solid $orange;
+    border-bottom: 1px solid $orange;
+    color: $white;
+  }
+
+  &.green {
+    background-color: $green;
+    border: 1px solid $green;
+    border-bottom: 1px solid $green;
+  }
+
+  &.gray {
+    background-color: $gray;
+    border: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    color: $blue;
+  }
+
+  &.olive {
+    background-color: $lightOlive;
+    border-color: $lightOlive;
+    color: $darkBlue;
+  }
+
+  &.red {
+    background-color: $red;
+    border-color: $red;
+  }
+}
+
+.button {
+  display: inline-block;
+}
+
+button:focus,
+input:focus[type="button"],
+input:focus[type="reset"],
+input:focus[type="submit"],
+.button:focus,
+.entry-content a.button:focus {
+  background-color: $white;
+  color: $blue;
+}
+
+.button:hover,
+.entry-content a.button:hover,
+input:hover[type="submit"] {
+  background-color: $white;
+  border: 1px solid $blue;
+  color: $blue;
+}

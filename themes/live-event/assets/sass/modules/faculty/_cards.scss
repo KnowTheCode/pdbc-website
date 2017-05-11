@@ -1,0 +1,25 @@
+.faculty--card {
+  border-bottom: 0;
+  color: $darkBlue;
+  overflow: hidden;
+
+  &::after {
+    opacity: 0;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: $lightOlive;
+    border-width: 20px;
+    margin-left: -20px;
+    transition: all .3s .36s ease;
+  }
+}
+
+[data-panel-state="active"] .faculty--card::after {
+  opacity: 1;
+}

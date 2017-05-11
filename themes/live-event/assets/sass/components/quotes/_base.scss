@@ -1,0 +1,63 @@
+blockquote {
+  &.pullleft, &.pullright {
+    margin: 30px 0;
+    padding: 0;
+  }
+
+  &.pullleft {
+    float: left;
+    margin-left: 30px;
+    padding-left: 20px;
+  }
+
+  &.pullright {
+    border-left: none;
+    padding-left: 0;
+    border-right: 10px solid $green;
+    padding-right: 20px;
+    float: right;
+    margin-right: 20px;
+  }
+}
+
+span.quote__left, span.quote__right {
+  max-width: 35%;
+  margin: 15px;
+  padding: 10px;
+  border: none;
+  background-color: $yellow;
+  color: $black;
+  font-style: italic;
+  font-size: 110%;
+
+  &.gray {
+    background-color: $gray;
+  }
+
+  &.light {
+    background-color: #f2f2f2;
+  }
+
+  &.orange {
+    background-color: $orange;
+    color: $white;
+  }
+
+  &.green {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+span.quote__ {
+  &left {
+    margin-left: 0;
+    float: left;
+    text-align: left;
+  }
+  &right {
+    margin-right: 0;
+    float: right;
+    text-align: right;
+  }
+}

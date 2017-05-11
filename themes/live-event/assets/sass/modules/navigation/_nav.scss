@@ -1,0 +1,68 @@
+//
+// Site Navigation
+//===========================
+
+.genesis-nav-menu {
+	li, .menu-item, a {
+		margin: 0;
+		margin-right: 0;
+	}
+
+	.menu-item {
+		display: inline-block;
+		position: relative;
+		text-align: left;
+	}
+
+	li {
+		@include rem( font-size, 14px );
+		@include media($small-screen-up) {
+			@include rem( font-size, 16px );
+		}
+	}
+
+	a {
+		color: $white;
+		display: inline-block;
+		font-weight: 400;
+		letter-spacing: 1px;
+		padding: 7px 10px;
+		position: relative;
+		width: 100%;
+		border-bottom: 0;
+
+		@include media($medium-screen-up) {
+			padding: 15px 10px;
+		}
+	}
+
+	a:hover,
+	a:focus,
+	.current-menu-item > a {
+		color: lighten($black, 56);
+	}
+
+	> .menu-item > a {
+		border-bottom: 0;
+	}
+
+	.menu-item {
+		&:hover > .sub-menu {
+			left: auto;
+			opacity: 1;
+		}
+
+		&:hover, &:focus {
+			position: relative;
+		}
+	}
+
+}
+@include media($medium-screen-up) {
+
+	.genesis-nav-menu {
+		.menu-item:hover {
+			position: static;
+		}
+	}
+}

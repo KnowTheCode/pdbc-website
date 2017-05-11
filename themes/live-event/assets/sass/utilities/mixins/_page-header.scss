@@ -1,0 +1,47 @@
+//
+// Page Header Mixin
+//==============================
+
+
+@mixin page_header($margin: 23vw, $content_left: -40px) {
+
+    padding-top: 120px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 130px;
+    }
+
+
+
+  background-color: $white;
+
+  @media screen and (min-width: 768px) {
+    background-color: $white;
+    background-image: linear-gradient(rgba(255,255,255, 0.5) 100%, $white),
+    url(#{$image--path}/profitable-developer-bootcamp-hero.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+  }
+
+  .entry-title {
+    @include media($medium-screen-up)  {
+      margin-left: $content_left;
+    }
+  }
+
+  p {
+    @include media($medium-screen-up)  {
+      margin-left: $content_left;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .entry-title {
+    margin-bottom: 30px;
+  }
+}

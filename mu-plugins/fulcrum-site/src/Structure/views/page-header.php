@@ -1,0 +1,1 @@
+<h3 class="page-subtitle"><?php esc_html_e( $subtitle ); ?></h3>

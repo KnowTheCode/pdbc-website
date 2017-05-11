@@ -1,0 +1,17 @@
+/* ## Entry Meta
+--------------------------------------------- */
+
+.entry-meta {
+  color: lighten($base--color, 33);
+  font-size: $secondary-font-size;
+
+  .entry-header & {
+    margin: 0 0 24px;
+    text-align: left;
+  }
+}
+
+//.entry-comments-link::before {
+//  content: "\2014";
+//  margin: 0 6px 0 2px;
+//}

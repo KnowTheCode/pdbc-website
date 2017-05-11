@@ -1,0 +1,17 @@
+.author-box {
+  margin: 50px 0;
+  padding: 20px;
+  background-color: $author-box--background;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.author-box--container {
+  margin-left: 75px + 15px;
+
+  @media screen and (min-width: 1025px) {
+    margin-left: 125px + 25px;
+  }
+}

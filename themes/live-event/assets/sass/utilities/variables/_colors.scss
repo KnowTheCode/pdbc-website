@@ -1,0 +1,63 @@
+//
+// Colors
+//======================
+
+$green: #627f00; // primary brand color
+$black: #010204; // text color
+$darkBlue: #1b202d; // heading color
+
+$blue: #1c202c;
+$lightOlive: #c8cfa9;
+
+$white: #fff;
+$orange: #cc0000; //#cb4b14;
+
+$gray: #cccccc;
+$red: #cc0000;
+$yellow: #ffc40d;
+
+$colorPHP: #777bb4;
+$colorJS: #f0da50;
+$colorjQuery: #0d4872;
+$colorWordPress: #00749b;
+$colorGenesis: #0066CC;
+$colorSQL: #3e78a6;
+$colorHTML: #f14a29;
+$colorCSS: #0092bf;
+$titleBannerColor: #f2f2f2;
+$colorPlugins: #89afae;
+
+$colorPro: #adcd00;
+$colorProBorder: #adcd00;
+$colorBasic: #f58728;
+$colorBasicBorder: #f48728;
+$colorFree: #465573;
+
+$highlight-color: $yellow; //#868686;
+$background--accent-color: #ced2b7;
+$sidebar--color: #868686;
+$sidebar--hover-color: $darkBlue;
+
+//
+// Color Configuration
+//===========================
+$link--color: $red;
+$link--hover-color: $darkBlue;
+
+$light-background-color: #f2f2f2;
+
+// Elements
+$base--color: $darkBlue;
+$body--background-color: $white;
+
+$comments-background-color: $white;
+$author-box--background: $light-background-color;
+
+//5px 5px 5px 0px rgba(28,32,44,0.5);
+$pop--box-shadow: 10px 10px 32px 2px rgba(0,0,0,.12) !default;
+
+
+// Technical focus colors
+$colorTechnical: $colorWordPress !default;
+$colorBusiness: lighten( $green, 18% ) !default;
+$colorPM: #f0da50 !default;

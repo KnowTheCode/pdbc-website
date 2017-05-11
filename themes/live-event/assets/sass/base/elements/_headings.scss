@@ -1,0 +1,69 @@
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $darkBlue;
+  font-family: $heading-font-family;
+  font-weight: 700;
+  line-height: $heading-line-height;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+$header-full-size--minwidth: 1200px;
+
+h1 {
+  @include rem( font-size, $h1-font-size--min);
+
+  @media screen and (min-width: $header-full-size--minwidth) {
+    @include rem( font-size, $h1-font-size);
+  }
+}
+
+h2 {
+  @include rem( font-size, $h2-font-size--min);
+
+  @media screen and (min-width: $header-full-size--minwidth) {
+    @include rem( font-size, $h2-font-size);
+  }
+}
+
+h3 {
+  @include rem( font-size, $h3-font-size--min);
+
+  @media screen and (min-width: $header-full-size--minwidth) {
+    @include rem( font-size, $h3-font-size);
+  }
+}
+
+.entry-title,
+.sidebar-primary .widgetitle,
+h4 {
+  @include rem( font-size, $h4-font-size--min);
+
+  @media screen and (min-width: $header-full-size--minwidth) {
+    @include rem( font-size, $h4-font-size);
+  }
+}
+
+h5 {
+  @include rem( font-size, $h5-font-size--min);
+
+  @media screen and (min-width: $header-full-size--minwidth) {
+    @include rem( font-size, $h5-font-size);
+  }
+}
+
+h6 {
+  @include rem( font-size, $h6-font-size--min);
+
+  @media screen and (min-width: $header-full-size--minwidth) {
+    @include rem( font-size, $h6-font-size);
+  }
+}

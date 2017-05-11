@@ -1,0 +1,25 @@
+.tab-panel {
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid $darkBlue;
+  padding: 20px;
+  margin: 13px 0 40px;
+
+
+  @media screen and (max-width: 767px) {
+    margin-top: 11px;
+    padding: 10px 20px 20px;
+
+    .one-half, .one-third {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 30px;
+
+      &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
