@@ -363,6 +363,11 @@ function fulcrum_sanitize_metadata( $metadata, $filter = '' ) {
 }
 
 function fulcrum_sanitize_single_metadata( $value, $filter = '' ) {
+	// Added 15.May.2017
+	if ( $filter === false ) {
+		return $value;
+	}
+
 	if ( $filter ) {
 		return $filter( $value );
 	}

@@ -10,6 +10,8 @@
  */
 namespace KnowTheCode\LiveEvent;
 
+use function KnowTheCode\Faculty\Template\add_body_class;
+
 add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme', 15 );
 /**
  * Theme setup.

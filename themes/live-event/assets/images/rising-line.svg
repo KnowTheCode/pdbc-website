@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="782" height="222.1">
   <g fill="none" fill-rule="evenodd">
     <g transform="translate(.18 78.065)">
-      <path stroke="#e0f7e6" d="M.5 116.5l74-41m0 0l153 100m0 0l237-175" stroke-linecap="square"/>
-      <circle cx="74.5" cy="76.5" r="4.5" fill="#e0f7e6"/>
-      <circle cx="227.5" cy="174.5" r="4.5" fill="#e0f7e6"/>
+      <path stroke="#c8cfa9" d="M.5 116.5l74-41m0 0l153 100m0 0l237-175" stroke-linecap="square"/>
+      <circle cx="74.5" cy="76.5" r="4.5" fill="#c8cfa9"/>
+      <circle cx="227.5" cy="174.5" r="4.5" fill="#c8cfa9"/>
     </g>
     <g transform="rotate(-6 561.064 -4324.925)">
-      <path stroke="#e0f7e6" d="M4.5 44.5l153 100m0 0l123-127m0 0L328 0" stroke-linecap="square"/>
-      <circle cx="4.5" cy="45.5" r="4.5" fill="#e0f7e6"/>
-      <circle cx="280.5" cy="17.5" r="4.5" fill="#e0f7e6"/>
-      <circle cx="157.5" cy="143.5" r="4.5" fill="#e0f7e6"/>
+      <path stroke="#c8cfa9" d="M4.5 44.5l153 100m0 0l123-127m0 0L328 0" stroke-linecap="square"/>
+      <circle cx="4.5" cy="45.5" r="4.5" fill="#c8cfa9"/>
+      <circle cx="280.5" cy="17.5" r="4.5" fill="#c8cfa9"/>
+      <circle cx="157.5" cy="143.5" r="4.5" fill="#c8cfa9"/>
     </g>
   </g>
 </svg>

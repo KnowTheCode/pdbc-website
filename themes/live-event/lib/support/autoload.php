@@ -37,10 +37,6 @@ function init_files( $is_admin = false ) {
 //		'structure/search.php',
 	);
 
-	if ( $is_admin ) {
-		$filenames[] = 'admin/metabox/class-metabox.php';
-	}
-
 	load_specified_files( $filenames );
 }
 
@@ -63,24 +59,6 @@ function load_specified_files( array $filenames, $folder_root = '' ) {
 }
 
 /**
- * Create the metaboxes.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function create_metaboxes() {
-	$metabox_configs = (array) include( CHILD_THEME_DIR . '/config/admin/metabox/metaboxes.php' );
-	if ( ! $metabox_configs ) {
-		return;
-	}
-
-	foreach( $metabox_configs as $config ) {
-		new Metabox( new Config( $config ) );
-	}
-}
-
-/**
  * Autoload the files and dependencies.
  *
  * @since 1.0.0
@@ -91,10 +69,6 @@ function do_autoload() {
 	$is_admin = is_admin();
 
 	init_files( $is_admin );
-
-	if ( $is_admin ) {
-		create_metaboxes();
-	}
 }
 
 do_autoload();

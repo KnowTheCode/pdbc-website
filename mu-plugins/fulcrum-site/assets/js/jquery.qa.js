@@ -11,9 +11,11 @@
 	'use strict'
 
 	$(document).ready(function () {
-		if ( typeof qaParameters === "object" ) {
-			$('.qa--question').fulcrumQA( qaParameters.qa );
+		if ( typeof qaParameters !== "object" ) {
+			return;
 		}
+
+		$('.qa--question').fulcrumQA( qaParameters.qa );
 	});
 
 }(jQuery, window, document));

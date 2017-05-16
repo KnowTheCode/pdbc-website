@@ -21,6 +21,8 @@ function unregister_header_events() {
 
 }
 
+//'_COOKIE'
+
 add_action( 'genesis_before_header', __NAMESPACE__ . '\render_fullpage_optin', 1 );
 /**
  * Renders out the pre-footer.

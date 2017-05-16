@@ -26,6 +26,8 @@ function unregister_post_events() {
 	remove_action( 'genesis_after_entry', 'genesis_after_entry_widget_area' );
 }
 
+
+
 add_action( 'genesis_before', __NAMESPACE__ . '\relocate_entry_header' );
 /**
  * Relocate the entry header to before the content-sidebar containers.
@@ -53,7 +55,7 @@ function relocate_entry_header() {
  */
 function render_page_header() {
 	$page_title = get_the_title();
-	$post_type = get_post_type();
+	$post_type  = get_post_type();
 
 	if ( is_single() && get_post_type() == 'post' ) {
 		$view_file = 'single-header.php';
@@ -176,7 +178,7 @@ function render_inpost_navigation() {
 	$previous = get_previous_post();
 	$next     = get_next_post();
 
-	include( __DIR__ .'/views/single-navigation.php' );
+	include( __DIR__ . '/views/single-navigation.php' );
 }
 
 add_filter( 'genesis_author_box_gravatar_size', __NAMESPACE__ . '\set_author_box_gravatar_size' );

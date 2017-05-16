@@ -12,6 +12,7 @@
 namespace KnowTheCode\FulcrumSite;
 
 use Fulcrum\Config\Config;
+use Fulcrum\Metadata\Metabox;
 
 return array(
 
@@ -22,6 +23,14 @@ return array(
 			'autoload' => false,
 			'concrete' => function ( $container ) {
 				return new Config( FULCRUM_SITE_PLUGIN_DIR . 'config/widgets/get-on-list.php' );
+			}
+		),
+		'metabox.fulcrum_site.page_header' => array(
+			'autoload' => false,
+			'concrete' => function ( $container ) {
+				return new Metabox(
+					new Config( FULCRUM_SITE_PLUGIN_DIR . 'config/admin/metabox-page-header.php' )
+				);
 			}
 		),
 	),
@@ -56,10 +65,6 @@ return array(
 			'provider' => 'provider.shortcode',
 			'config'   => FULCRUM_SITE_PLUGIN_DIR . 'config/shortcodes/qa.php',
 		),
-//		'shortcode.get-on-list'  => array(
-//			'provider' => 'provider.shortcode',
-//			'config'   => FULCRUM_SITE_PLUGIN_DIR . 'config/shortcodes/get-on-list.php',
-//		),
 
 		/****************************
 		 * Widgets
@@ -70,5 +75,9 @@ return array(
 				'KnowTheCode\FulcrumSite\Widget\GetOnListWidget',
 			),
 		),
+	),
+
+	'plugin_init_admin_events' => array(
+		'metabox.fulcrum_site.page_header',
 	),
 );

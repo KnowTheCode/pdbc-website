@@ -26,11 +26,10 @@ include_once( 'fulcrum/bootstrap.php' );
 
 $fulcrum = \Fulcrum\launch();
 
-//include( 'bbpress/bootstrap.php' );
-
 $fulcrum_plugins = array(
-	'\KnowTheCode\FulcrumSite\launch' => 'fulcrum-site/bootstrap.php',
-	'\KnowTheCode\Faculty\launch'     => 'faculty/bootstrap.php',
+	'\KnowTheCode\FulcrumSite\launch'     => 'fulcrum-site/bootstrap.php',
+	'\KnowTheCode\Faculty\launch'         => 'faculty/bootstrap.php',
+	'\KnowTheCode\AdaptiveContent\launch' => 'adaptive-content/bootstrap.php',
 );
 
 foreach ( $fulcrum_plugins as $function_name => $boostrap_filename ) {

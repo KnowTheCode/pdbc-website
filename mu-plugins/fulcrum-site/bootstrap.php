@@ -11,7 +11,7 @@
  * Plugin Name:     Site Specific Fulcrum Addon Plugin
  * Plugin URI:      https://KnowTheCode.io
  * Description:     Adds specific functionality for Know the Code such as infobox, QA, Member Nav Widget, and a few other goodies.
- * Version:         1.2.2
+ * Version:         1.0.1
  * Author:          hellofromTonya
  * Author URI:      https://KnowTheCode.io
  * Text Domain:     fulcrum_site
@@ -88,7 +88,7 @@ function load_dependencies() {
 	);
 
 	if ( is_admin() ) {
-		$filenames[] = 'src/Admin/Metabox/header.php';
+//		$filenames[] = 'src/Admin/Metabox/header.php';
 	} else {
 		$filenames[] = 'src/Structure/grid.php';
 		$filenames[] = 'src/Structure/post.php';

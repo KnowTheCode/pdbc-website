@@ -3,11 +3,12 @@
  * Plugin Controller
  *
  * @package     KnowTheCode\FulcrumSite
- * @since       1.2.2
+ * @since       1.0.1
  * @author      hellofromTonya
  * @link        https://KnowTheCode.io
- * @license     GNU General Public License 2.0+
+ * @license     GPL-2.0+
  */
+
 namespace KnowTheCode\FulcrumSite;
 
 use Fulcrum\Addon\Addon;
@@ -19,7 +20,7 @@ class Plugin extends Addon {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/**
 	 * The plugin's minimum WordPress requirement
@@ -52,6 +53,26 @@ class Plugin extends Addon {
 		add_filter( 'genesis_load_deprecated', '__return_false' );
 
 		add_action( 'init', array( $this, 'init_local_plugin' ) );
+	}
+
+
+	/**
+	 * Initialize the events.
+	 *
+	 * @since 1.1.2
+	 *
+	 * @return void
+	 */
+	protected function init_events() {
+		parent::init_events();
+
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		foreach ( $this->config->plugin_init_admin_events as $concrete_keys ) {
+			$this->fulcrum[ $concrete_keys ];
+		}
 	}
 
 	/**

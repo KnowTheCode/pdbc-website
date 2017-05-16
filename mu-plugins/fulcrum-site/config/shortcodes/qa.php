@@ -25,8 +25,6 @@ return array(
 			'question'   => '',
 			'type'       => '',
 			'color'      => '',
-			'open_icon'  => 'fa fa-chevron-down',
-			'close_icon' => 'fa fa-chevron-up',
 		),
 	),
 );

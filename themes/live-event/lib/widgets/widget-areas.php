@@ -39,18 +39,23 @@ function register_widget_areas() {
 	$widget_areas = array(
 		array(
 			'id'          => 'pre_footer',
-			'name'        => __( 'Pre-Footer', 'ktc' ),
-			'description' => __( 'This is the Pre-Footer section, just before the footer widgets.', 'ktc' ),
+			'name'        => __( 'Pre-Footer', 'live-event' ),
+			'description' => __( 'This is the Pre-Footer section, just before the footer widgets.', 'live-event' ),
 		),
 		array(
 			'id'          => 'disclaimer',
-			'name'        => __( 'Disclaimer', 'ktc' ),
-			'description' => __( 'This is the Disclaimer section on very bottom of the site.', 'ktc' ),
+			'name'        => __( 'Disclaimer', 'live-event' ),
+			'description' => __( 'This is the Disclaimer section on very bottom of the site.', 'live-event' ),
 		),
 		array(
 			'id'          => 'fullpage-optin',
-			'name'        => __( 'Fullpage Optin', 'ktc' ),
-			'description' => __( 'This is the fullpage optin panel that overlays the webpage.', 'ktc' ),
+			'name'        => __( 'Fullpage Optin', 'live-event' ),
+			'description' => __( 'This is the fullpage optin panel that overlays the webpage.', 'live-event' ),
+		),
+		array(
+			'id'          => 'iam',
+			'name'        => __( '"I am" Selector Popup', 'live-event' ),
+			'description' => __( '"I am" selector popup panel".', 'live-event' ),
 		),
 	);
 

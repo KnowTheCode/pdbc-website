@@ -1,0 +1,22 @@
+$risingLineWidth: 782;
+$risingLineHeight: 222.1;
+
+//.rising-line-container {
+//  position: absolute;
+//  //top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  width: 100%;
+//  height: 200px;
+//
+//  background-image: url(#{$image--path}/rising-line.svg);
+//  background-position: bottom left;
+//  background-repeat: no-repeat;
+//  background-size: contain;
+//}
+
+.rising-line {
+  width: $risingLineWidth * 2 + px;
+  height: $risingLineHeight * 2 + px;
+}

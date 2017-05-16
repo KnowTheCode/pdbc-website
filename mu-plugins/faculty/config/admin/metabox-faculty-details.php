@@ -30,10 +30,9 @@ return array(
 
 	'restrict' => array(
 		'post_type' => $post_types,
-//		'parent_post' => true,
-//		'child_post' => true,
 	),
 
-	'metadata' => $metadata['defaults'],
-	'filters'  => $metadata['filters'],
+	'metadata'     => $metadata['defaults'],
+	'filters'      => $metadata['filters'],
+	'social_links' => $metadata['social_links'],
 );

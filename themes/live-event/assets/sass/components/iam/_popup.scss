@@ -1,0 +1,72 @@
+.iam-picker-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+
+  width: 0%;
+  height: 0;
+
+  display: none;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+
+  background-color: $lightOlive;
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 22px;
+    }
+  }
+
+  > .wrapper {
+    position: relative;
+    padding: 80px 5% 40px;
+
+    @media screen and (min-width: 768px) {
+      padding: 100px 5%;
+    }
+  }
+
+  body.iam__open & {
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    overflow: auto;
+    display: block;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s;
+
+    z-index: 999999999;
+  }
+}
+
+// close button
+.iam-picker-panel--close-button {
+  position: absolute;
+  font-size: 16px;
+  top: 15px;
+  right: 15px;
+  padding: 8px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    top: 40px;
+    right: 40px;
+    padding: 15px;
+  }
+
+  border-bottom: 0;
+  background-color: $orange;
+  color: $white;
+
+  z-index: 9999999999999;
+
+  &:hover {
+    background-color: $white;
+    color: $orange;
+  }
+}

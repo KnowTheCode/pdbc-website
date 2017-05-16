@@ -6,6 +6,10 @@
   margin: 13px 0 40px;
 
 
+  &.--no-border {
+    border: 0;
+  }
+
   @media screen and (max-width: 767px) {
     margin-top: 11px;
     padding: 10px 20px 20px;

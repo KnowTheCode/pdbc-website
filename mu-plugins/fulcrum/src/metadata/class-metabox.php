@@ -213,6 +213,7 @@ class Metabox implements MetaboxContract {
 	 * @return void
 	 */
 	protected function prepare_single_metadata_for_db( $post_id, $post, $meta_key, $default_metadata ) {
+
 		$data = fulcrum_sanitize_metadata(
 			$_POST[ $meta_key ],
 			$this->config->filters[ $meta_key ]

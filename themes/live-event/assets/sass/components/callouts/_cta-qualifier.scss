@@ -12,11 +12,31 @@
 .cta-qualifier__block {
   text-align: center;
   padding: 20px;
+  font-size: 15px;
+  font-weight: 300;
 
   @media screen and (min-width: 768px) {
-    width: 50%;
     margin: 0;
     float: left;
+    width: 50%;
+    min-height: 175px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 50%;
+
+    &.--width-33p {
+      width: 33%;
+    }
+
+    &.--width-66p {
+      width: 66%;
+    }
+
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
 
     &.--width-25p {
       width: 25%;
@@ -56,11 +76,20 @@
 
 .cta-qualifier__number {
   display: block;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 500;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
+  }
 }
 
 .cta-qualifier__increment {
   display: block;
-  font-size: 28px;
+  font-size: 18px;
+  font-weight: 400;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 28px;
+  }
 }

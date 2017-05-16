@@ -9,22 +9,22 @@
  * hidden content (when it is hidden) or hide it (when showing).
  *
  * @package     KnowTheCode
- * @since       1.0.0
+ * @since       1.0.1
  * @author      hellofromTonya
  * @link        https://KnowTheCode.io
- * @license     GNU General Public License 2.0+
+ * @license     GPL-2.0+
  */
 ;(function ($, window, document, undefined) {
-
     'use strict'
 
     $.fn.fulcrumQA = function(options) {
         var qa = $(this),
             defaults = {
                 iconEl: '.qa--icon',
+	            answerEl: '.qa--answer',
                 iconClassname: {
-                    open: '',
-                    close: ''
+                    open: '--is-open',
+                    closed: '--is-closed'
                 }
             };
 
@@ -34,33 +34,12 @@
         var namespace = qa.vars.namespace,
             methods = {},
             answers = qa.next(),
-            iconClassname = {
-                open: qa.vars.iconClassname.open,
-                close: qa.vars.iconClassname.close
-            },
             icons = qa.find( qa.vars.iconEl );
 
         // Private methods
         methods = {
             init: function() {
-                methods.closeAnswersOnPageLoad();
-
                 methods.clickHandler();
-            },
-
-            /**
-             * Close the answer(s) on page load, based upon if it should be closed.
-             *
-             * @since 1.0.0
-             */
-            closeAnswersOnPageLoad: function() {
-                $.each( qa, function( index ){
-                    if ( methods.isAnswerToBeClosed( index ) ) {
-                        var $answer = methods.getAnswer( index );
-
-                        $answer.hide();
-                    }
-                });
             },
 
             /**
@@ -99,25 +78,31 @@
              * @param obj $icon
              */
             openAnswer: function( $answer, $icon ) {
-                $answer.slideDown();
+                $answer.slideDown(function(){
+	                methods.changeHandleHTML($icon, 'closeHandle');
 
-                methods.changeIconClassname( $icon, true );
+	                methods.changeIconClassname( $icon, true );
+                });
             },
 
             /**
-             * Close the answer.  Slides up the answer and changes the icon.
+             * Close the answer. Slides up the answer and changes the icon.
              *
              * @param obj $answer
              * @param obj $icon
              */
             closeAnswer: function( $answer, $icon ) {
-                $answer.slideUp();
+                $answer.slideUp(function(){
+	                methods.changeHandleHTML($icon, 'openHandle');
 
-                methods.changeIconClassname( $icon, false );
+	                methods.changeIconClassname( $icon, false );
+                });
             },
 
             /**
              * Change the Icon's classname
+             *
+             * When opening, remove the --is-closed class and add the --is-open class.
              *
              * @param object $icon
              * @param bool isOpening
@@ -131,6 +116,18 @@
                 $icon
                     .removeClass( removeClassname )
                     .addClass( addClassname );
+            },
+
+	        /**
+	         * Change the icon's text by grabbing the data handle.
+	         *
+	         * @param object $icon
+	         * @param string dataAttr
+	         */
+            changeHandleHTML: function( $icon, dataAttr ) {
+                var handleText = $icon.data( dataAttr );
+
+	            $icon.text( handleText );
             },
 
             /***********************
@@ -168,19 +165,27 @@
              *
              *
              * @param bool isOpening Indicates if icon should be opening.
-             * @param bool isAdd Indicates if this is an `addClass()` action
+             * @param bool isAddClassAction Indicates if this is an `addClass()` action
              *
              * @returns {string}
              */
-            getIconClassname: function( isOpening, isAdd ) {
+            getIconClassname: function( isOpening, isAddClassAction ) {
                 isOpening = methods.setDefaultState( isOpening );
-                isAdd = methods.setDefaultState( isAdd );
+                isAddClassAction = methods.setDefaultState( isAddClassAction );
 
-                if ( isAdd ) {
-                    return isOpening ? iconClassname.close : iconClassname.open;
+                var openIndex, closeIndex;
+
+                if ( isAddClassAction ) {
+	                openIndex = 'open';
+	                closeIndex = 'closed';
+                } else {
+	                openIndex = 'closed';
+	                closeIndex = 'open';
                 }
 
-                return isOpening ? iconClassname.open : iconClassname.close;
+                return isOpening
+                    ? qa.vars.iconClassname[ openIndex ]
+                    : qa.vars.iconClassname[ closeIndex ];
             },
 
             /**
@@ -211,7 +216,7 @@
                 if ( index in icons ) {
                     var icon = icons[ index ];
 
-                    return $( icon ).hasClass(iconClassname.open);
+                    return $( icon ).hasClass( qa.vars.iconClassname.open );
                 }
 
                 return false;
@@ -241,9 +246,11 @@
 	'use strict'
 
 	$(document).ready(function () {
-		if ( typeof qaParameters === "object" ) {
-			$('.qa--question').fulcrumQA( qaParameters.qa );
+		if ( typeof qaParameters !== "object" ) {
+			return;
 		}
+
+		$('.qa--question').fulcrumQA( qaParameters.qa );
 	});
 
 }(jQuery, window, document));

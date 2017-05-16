@@ -3,10 +3,10 @@
  * Minimized Fulcrum Site build runtime configuration parameters
  *
  * @package     KnowTheCode\FulcrumSite\Asset\Repo;
- * @since       1.0.0
+ * @since       1.0.1
  * @author      hellofromTonya
  * @link        https://KnowTheCode.io
- * @license     GNU General Public License 2.0+
+ * @license     GPL-2.0+
  */
 
 namespace KnowTheCode\FulcrumSite\Asset\Repo;
@@ -24,10 +24,10 @@ return array(
 		'localize'  => array(
 			'params'      => array(
 				'qa' => array(
-					'iconEl'        => '.qa-icon',
+					'iconEl'        => '.qa--icon',
 					'iconClassname' => array(
-						'open'  => 'fa-chevron-down',
-						'close' => 'fa-chevron-up',
+						'open'  => '--is-open',
+						'closed' => '--is-closed',
 					),
 				),
 			),

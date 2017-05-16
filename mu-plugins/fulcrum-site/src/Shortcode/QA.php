@@ -57,11 +57,11 @@ class QA extends Shortcode {
 	 *
 	 * @return string
 	 */
-	protected function get_classes() {
-		$classes = '';
+	protected function get_class() {
+		$classes = parent::get_class();
 
 		if ( $this->atts['color'] ) {
-			$classes .= ' ' . esc_attr( $this->atts['color'] );
+			$classes .= ' --' . esc_attr( $this->atts['color'] );
 		}
 
 		if ( $this->atts['type'] ) {

@@ -1,0 +1,88 @@
+//
+// Big Button Callouts
+// ============================
+
+.split-screen {
+  overflow: hidden;
+  margin: 0;
+
+  &::after {
+    content: '';
+    clear: both;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.split-screen__button {
+  float: left;
+  width: 100%;
+  @media screen and (min-width: 480px) {
+    width: 50%;
+  }
+  height: 300px;
+
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+
+  padding: 16px;
+  border-bottom: none;
+
+  font-weight: 600;
+  text-align: center;
+  @include rem( font-size, 14px );
+
+  @media screen and (min-width: 1024px) {
+    @include rem( font-size, 20px );
+  }
+
+  background-color: $darkBlue;
+  color: $white;
+
+  &[data-iam-current="active"], &:hover[data-iam-current="active"] {
+    background-color: $white;
+    border-color: $darkBlue;
+    color: $darkBlue;
+  }
+}
+
+.split-screen__heading {
+  font-weight: 900;
+  text-transform: uppercase;
+  @include rem( font-size, 22px );
+
+  @media screen and (min-width: 1400px) {
+    @include rem( font-size, 40px );
+  }
+}
+
+// ===============================
+// the centered background image.
+// ===============================
+.split-screen__button {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 40px;
+    left: 50%;
+    margin-left: -100px;
+
+    background: url(#{$image--path}/pdbc-logo.png);
+    opacity: 0.1;
+
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    z-index: 2;
+  }
+}
+
+.split-screen__button:focus {
+  outline: 0;
+}

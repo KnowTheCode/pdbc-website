@@ -1,0 +1,27 @@
+.wait-spinner {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    top: 100px;
+  }
+
+  // block the buttons as we wait.
+  background-color: rgba( 0,0,0,0.8);
+  text-align: center;
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin-top: 5%;
+  }
+
+  p {
+    text-align: center;
+    color: $white;
+    font-size: 150%;
+  }
+}

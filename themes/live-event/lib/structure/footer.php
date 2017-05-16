@@ -48,6 +48,8 @@ add_action( 'genesis_after_footer', __NAMESPACE__ . '\do_disclaimer' );
  */
 function do_disclaimer() {
 	include( CHILD_THEME_DIR . '/lib/views/scrollup.php' );
+
+	genesis_widget_area( 'iam' );
 }
 
 // Add schema markup to Footer Navigation Menu.

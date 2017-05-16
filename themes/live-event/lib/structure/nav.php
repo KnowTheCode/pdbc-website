@@ -8,6 +8,7 @@
  * @link        https://KnowTheCode.io
  * @license     GPL-2.0+
  */
+
 namespace KnowTheCode\LiveEvent\Structure;
 
 /**
@@ -33,7 +34,16 @@ add_action( 'genesis_header', __NAMESPACE__ . '\render_main_nav', 11 );
 function render_main_nav() {
 	$event_home_url = home_url();
 
-	require_once( __DIR__ . '/views/nav/hamburger.html' );
+	foreach ( array( 'hamburger', 'main-nav' ) as $filename ) {
+		$file = sprintf( '%s/views/nav/%s.php',
+			__DIR__,
+			$filename
+		);
+
+		require_once( $file );
+	}
+
+
 	require_once( __DIR__ . '/views/nav/main-nav.php' );
 }
 

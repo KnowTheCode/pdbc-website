@@ -12,7 +12,7 @@
 namespace KnowTheCode\Faculty\Metdata;
 
 return array(
-	'defaults' => array(
+	'defaults'   => array(
 		'_faculty_details' => array(
 			'short_bio'    => '',
 			'twitter'      => '',
@@ -22,9 +22,11 @@ return array(
 			'wordpress'    => '',
 			'blog_url'     => '',
 			'business_url' => '',
+			'codepen'      => '',
+			'dribble'      => '',
 		),
 	),
-	'filters'  => array(
+	'filters'    => array(
 		'_faculty_details' => array(
 			'short_bio'    => 'esc_textarea',
 			'twitter'      => 'esc_url',
@@ -34,6 +36,8 @@ return array(
 			'wordpress'    => 'esc_url',
 			'blog_url'     => 'esc_url',
 			'business_url' => 'esc_url',
+			'codepen'      => 'esc_url',
+			'dribble'      => 'esc_url',
 		),
 	),
 	'font_icons' => array(
@@ -42,8 +46,21 @@ return array(
 		'facebook'     => 'facebook-official',
 		'linkedin'     => 'linkedin-square',
 		'github'       => 'github-square',
+		'dribble'      => 'dribbble',
+		'codepen'      => 'codepen',
 		'wordpress'    => 'wordpress',
 		'blog_url'     => 'pencil-square',
 		'business_url' => 'link',
-	)
+	),
+	'social_links' => array(
+		'twitter'      => 'Twitter',
+		'facebook'     => 'Facebook',
+		'linkedin'     => 'LinkedIn',
+		'github'       => 'GitHub',
+		'dribble'      => 'Dribbble',
+		'codepen'      => 'CodePen',
+		'wordpress'    => 'WordPress',
+		'blog_url'     => 'Blog',
+		'business_url' => 'Business Website',
+	),
 );

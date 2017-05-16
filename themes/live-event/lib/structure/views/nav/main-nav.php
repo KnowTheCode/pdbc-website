@@ -1,7 +1,7 @@
 <nav id="main-menu" class="nav-primary menu--container animated" data-slidein="slideInRight"
      data-slideout="slideOutRight" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <div class="wrapper">
-        <?php include( __DIR__ . '/hamburger.html' ); ?>
+        <?php include( __DIR__ . '/hamburger.php' ); ?>
         <ul class="menu genesis-nav-menu menu-primary">
             <li class="menu-item">
                 <a href="<?php echo $event_home_url; ?>#overview" itemprop="url"><span itemprop="name">Overview</span></a>

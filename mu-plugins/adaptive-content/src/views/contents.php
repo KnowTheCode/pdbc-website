@@ -1,0 +1,2 @@
+<div class="iam-contents iam--entrepreneur" data-iam="entrepreneur"<?php echo $entrepreneur_style; ?>><?php the_content(); ?></div>
+<div class="iam-contents iam--developer" data-iam="developer"<?php echo $developer_style; ?>><?php echo wpautop( $developer_content ); ?></div>

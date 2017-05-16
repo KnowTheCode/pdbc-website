@@ -67,3 +67,10 @@ h6 {
     @include rem( font-size, $h6-font-size);
   }
 }
+
+
+.heading-new-line {
+  @media screen and (min-width: 480px) {
+    display: block;
+  }
+}

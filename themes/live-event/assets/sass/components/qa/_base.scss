@@ -1,0 +1,15 @@
+$qaColor: $lightOlive;
+$qaLighterColor: #f2f2f2;
+$qaPadding: 20px;
+
+.qa {
+  margin: 20px 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.qa--question, .qa--answer {
+  border: 1px solid $qaColor;
+}

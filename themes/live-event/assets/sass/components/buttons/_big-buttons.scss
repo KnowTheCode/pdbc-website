@@ -4,7 +4,7 @@
 
 .big-button-callouts {
   overflow: hidden;
-  margin: 40px 0;
+  margin: 0;
 
   &::after {
     content: '';
@@ -19,7 +19,7 @@
   padding: 16px;
   border-bottom: none;
 
-  background-color: $blue;
+  background-color: $darkBlue;
   color: $white;
 
   @include display(flex);
@@ -30,16 +30,32 @@
 
   @include media($smaller-screen-up) {
     @include rem( font-size, 22px );
-    width: 50%;
   }
 
   @include media($small-screen-up) {
     @include rem( font-size, 22px );
-    width: 25%;
   }
   @include media($large-screen-up) {
     @include rem( font-size, 30px );
   }
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin: 0;
+
+    &.--width-25p {
+      width: 25%;
+    }
+
+    &.--width-33p {
+      width: 33%;
+    }
+
+    &.--width-66p {
+      width: 66%;
+    }
+  }
+
 }
 
 .big-button--icon {

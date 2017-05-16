@@ -1,0 +1,65 @@
+.qa {
+  &.--lighter {
+    .qa--question {
+      background-color: $qaLighterColor;
+    }
+
+    .qa--answer, .qa--question {
+      border-color: $qaLighterColor;
+    }
+
+    .qa--icon {
+      background-color: $qaColor;
+    }
+  }
+
+  &.--blue {
+    .qa--question {
+      background-color: $darkBlue;
+    }
+
+    .qa--answer, .qa--question {
+      border-color: $darkBlue;
+    }
+  }
+
+  &.--green {
+    .qa--question {
+      background-color: $green;
+    }
+
+    .qa--answer, .qa--question {
+      border-color: $green;
+    }
+  }
+
+  &.--orange {
+    .qa--question {
+      background-color: $orange;
+    }
+
+    .qa--answer, .qa--question {
+      border-color: $orange;
+    }
+  }
+
+  &.--wordpress {
+    .qa--question {
+      background-color: $colorWordPress;
+    }
+
+    .qa--answer, .qa--question {
+      border-color: $colorWordPress;
+    }
+  }
+}
+
+// Text Color
+.qa {
+  &.--blue, &.--green, &.--wordpress {
+    .qa--question {
+      color: $white;
+    }
+  }
+
+}

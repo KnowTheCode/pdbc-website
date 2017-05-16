@@ -1,0 +1,12 @@
+@media screen and (max-width: 479px) {
+  .split-screen__button {
+    height: 150px;
+    &::after {
+      width: 100px;
+      height: 100px;
+      margin-left: -50px;
+      background-size: 100px 100px;
+      top: 20px;
+    }
+  }
+}
