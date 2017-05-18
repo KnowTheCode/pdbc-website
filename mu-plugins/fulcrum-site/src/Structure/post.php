@@ -16,14 +16,14 @@ function render_page_header_content() {
 		return;
 	}
 
-	$subtitle = get_page_header_meta( '_fulcrum_header_subtitle' );
+	$subtitle = get_page_header_meta( '_fulcrum_subtitle' );
 	if ( $subtitle ) {
 		include( __DIR__ . '/views/page-header.php' );
 	}
 
 	$content = get_page_header_meta( '_fulcrum_header_content' );
 	if ( $content ) {
-		echo wpautop( do_shortcode( $content ) );
+		echo do_shortcode( wpautop( $content ) );
 	}
 }
 

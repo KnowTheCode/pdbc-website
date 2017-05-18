@@ -7,10 +7,13 @@
                 <a href="<?php echo $event_home_url; ?>#overview" itemprop="url"><span itemprop="name">Overview</span></a>
             </li>
             <li class="menu-item">
-                <a href="<?php echo $event_home_url; ?>/faculty" itemprop="url"><span itemprop="name">All-Star Teachers</span></a>
+                <a href="<?php echo $event_home_url; ?>/our-faculty" itemprop="url"><span itemprop="name">All-Star Teachers</span></a>
             </li>
             <li class="menu-item">
-                <a href="<?php echo $event_home_url; ?>#program-details" itemprop="url"><span itemprop="name">The Details</span></a>
+                <a href="<?php echo $event_home_url; ?>/program-details" itemprop="url"><span itemprop="name">The Details</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="<?php echo $event_home_url; ?>/why-go" itemprop="url"><span itemprop="name">Why Go</span></a>
             </li>
             <li class="menu-item">
                 <a href="<?php echo $event_home_url; ?>/business-focus" itemprop="url" class="button --business"><span itemprop="name">Business Focus</span></a>

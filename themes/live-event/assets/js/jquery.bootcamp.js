@@ -10,15 +10,46 @@
 ;(function ( $, window, document, undefined ) {
 	'use strict';
 
-	var $window, $body;
+	var $window,
+		$body;
 
 	var init = function() {
 		$window = $( window );
 		$body = $('body');
 
-		$('.aniview').AniView();
+		initHero();
+
 		initPopups();
+
+		initAnimations();
+
+		$window.on('resize', initHero );
 	};
+
+	function initAnimations() {
+		$('.aniview').AniView();
+	}
+
+	function initHero() {
+		var $hero = $('.header-hero'),
+			windowHeight = $window.height(),
+			scrollHeight = 40;
+
+		if ( windowHeight >= 1020 || windowHeight <= 1200 ) {
+			return resetHeight( $hero );
+		}
+
+		if ( $hero.height() > windowHeight ) {
+			return resetHeight( $hero );
+		}
+
+		$hero.css( 'height', windowHeight - scrollHeight );
+
+	}
+
+	function resetHeight( $el ) {
+		$el.css('height', '');
+	}
 
 	//==========================
 	// Topic Handlers

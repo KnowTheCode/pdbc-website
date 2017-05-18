@@ -21,7 +21,7 @@ function init_constants() {
 
 	define( 'CHILD_THEME_DIR', get_stylesheet_directory() );
 
-	$version_number = get_asset_version_number( CHILD_THEME_DIR . '/style.css' );
+	$version_number = get_asset_version_number( CHILD_THEME_DIR . '/style.min.css' );
 
 	$child_theme = wp_get_theme();
 

@@ -20,13 +20,13 @@ return array(
 		'args'                => array(
 			'public'       => true,
 			'hierarchical' => false,
-			'has_archive'  => true,
+			'has_archive'  => false,
 			'show_in_rest' => true,
 			'menu_icon'    => 'dashicons-admin-users',
-			'rewrite'      => array(
-				'slug'       => 'our-faculty',
-				'with_front' => false,
-			),
+//			'rewrite'      => array(
+//				'slug'       => 'our-faculty',
+//				'with_front' => false,
+//			),
 		),
 		'labels'              => array(
 			'archive' => 'Faculty',

@@ -3,7 +3,7 @@
  * Adaptive Content Controller Plugin
  *
  * @package     KnowTheCode\AdaptiveContent
- * @since       1.0.0
+ * @since       1.0.2
  * @author      hellofromTonya
  * @link        https://KnowTheCode.io
  * @license     GPL-2.0+
@@ -22,7 +22,7 @@ class Plugin extends Addon {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.2';
 
 	/**
 	 * The plugin's minimum WordPress requirement
@@ -187,11 +187,9 @@ class Plugin extends Addon {
 			$content = do_shortcode( $post->post_content );
 		}
 
-		$content = wpautop( $content );
-
 		$data_packet = array(
 			'message'        => 'New content',
-			'content'        => $content,
+			'content'        => wpautop( $content ),
 			'post_id'        => $this->post_id,
 			'iam'            => $parameters['iam'],
 			'entryClassname' => '.entry.post-' . $this->post_id,
@@ -235,8 +233,10 @@ class Plugin extends Addon {
 	protected function render_developer_content( $echo = true ) {
 		$developer_content = $this->get_developer_content();
 		if ( ! $developer_content ) {
-			$developer_content = get_the_content();
+			$developer_content = do_shortcode( get_the_content() );
 		}
+
+		$developer_content = wpautop( $developer_content );
 
 		if ( $echo ) {
 			echo $developer_content;

@@ -16,8 +16,6 @@ h6 {
   padding: 0;
 }
 
-$header-full-size--minwidth: 1200px;
-
 h1 {
   @include rem( font-size, $h1-font-size--min);
 

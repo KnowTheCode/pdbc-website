@@ -20,7 +20,8 @@
 			$text: null
 		},
 		currentExperience,
-		cookieName = '_pdbc_ux_iam';
+		cookieName = '_pdbc_ux_iam',
+		isFirstVisit = false;
 
 	function init() {
 		$window = $( window );
@@ -47,6 +48,7 @@
 
 		currentExperience = getCookie();
 		if ( ! currentExperience  ) {
+			isFirstVisit = true;
 			openContainer();
 
 			return;
@@ -110,11 +112,23 @@
 
 		currentExperience = newIAM;
 
-// 		changeUXExperience();
-		requestNewContent( newIAM );
+// 		if ( isFirstVisit ) {
+// 			changeUXExperience();
+//
+// 			isFirstVisit = false;
+// 		} else {
+// 			requestNewContent( newIAM );
+// 		}
+
+		changeUXExperience();
 	}
 
 	function changeUXExperience() {
+		setCookie( currentExperience );
+		window.location.reload();
+		return;
+
+
 		openButton.$el.attr( 'data-iam-current', currentExperience );
 		openButton.$text.text( currentExperience );
 
