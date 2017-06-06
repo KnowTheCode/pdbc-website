@@ -40,9 +40,29 @@
     background-color: $colorPM;
   }
 
-  &.reminder, &.alert, &.info, &.--technical {
+  &.--career-development {
+    background-color: $colorCareer;
+  }
+
+  &.reminder, &.alert, &.info,
+  &.--technical,
+  &.--career-development {
     h1, h2, h3, h4, h5, p, & {
       color: $white;
+    }
+  }
+
+  &.alert, &.info,
+  &.--technical,
+  &.--career-development {
+    a {
+      color: $white;
+      border-color: $white;
+
+      &:hover {
+        color: $gray;
+        border-color: $gray;
+      }
     }
   }
 

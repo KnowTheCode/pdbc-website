@@ -19,47 +19,44 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\setup', 15 );
  * @return void
  */
 function setup() {
-	unregister_sidebar( 'sidebar-alt' );
-	unregister_sidebar( 'header-right' );
+	$config = include( CHILD_THEME_DIR . '/config/widgets/widget-areas.php' );
 
-	register_widget_areas();
+	foreach( (array) $config as $function_name => $specific_configuration ) {
+		$function_name = sprintf( '%s\%s', __NAMESPACE__, $function_name );
+
+		$function_name( $specific_configuration );
+	}
 
 	add_filter( 'widget_text', 'do_shortcode' );
 }
 
 /**
- * Register the widget areas enabled by default in Utility.
+ * Unregister the widget areas
  *
  * @since  1.0.0
  *
+ * @param array $config Runtime configuration parameters
+ *
  * @return void
  */
-function register_widget_areas() {
+function unregister_widget_areas( array $config ) {
+	foreach ( $config as $sidebar_name ) {
+		unregister_sidebar( $sidebar_name );
+	}
+}
 
-	$widget_areas = array(
-		array(
-			'id'          => 'pre_footer',
-			'name'        => __( 'Pre-Footer', 'live-event' ),
-			'description' => __( 'This is the Pre-Footer section, just before the footer widgets.', 'live-event' ),
-		),
-		array(
-			'id'          => 'disclaimer',
-			'name'        => __( 'Disclaimer', 'live-event' ),
-			'description' => __( 'This is the Disclaimer section on very bottom of the site.', 'live-event' ),
-		),
-		array(
-			'id'          => 'fullpage-optin',
-			'name'        => __( 'Fullpage Optin', 'live-event' ),
-			'description' => __( 'This is the fullpage optin panel that overlays the webpage.', 'live-event' ),
-		),
-		array(
-			'id'          => 'iam',
-			'name'        => __( '"I am" Selector Popup', 'live-event' ),
-			'description' => __( '"I am" selector popup panel".', 'live-event' ),
-		),
-	);
-
-	foreach ( $widget_areas as $widget_area ) {
+/**
+ * Register the widget areas
+ *
+ * @since  1.0.0
+ *
+ * @param array $config Runtime configuration parameters
+ *
+ * @return void
+ */
+function register_widget_areas( array $config ) {
+	foreach ( $config as $widget_area ) {
 		genesis_register_sidebar( $widget_area );
 	}
 }
+

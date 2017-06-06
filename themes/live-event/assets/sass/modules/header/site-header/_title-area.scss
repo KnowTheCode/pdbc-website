@@ -10,6 +10,7 @@
 
 .title-area {
   width: $logo--base-width;
+  height: 100%;
 
   @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
     width: $logo--medium-width;
@@ -29,7 +30,7 @@
     width: $logo--base-width;
     height: $logo--base-height;
 
-    @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
+    @media screen and (min-width: $medium-gutter--min-width) and (max-width: $large-gutter--min-width) {
       width: $logo--medium-width;
       height: $logo--medium-height;
     }
@@ -55,16 +56,20 @@
 
     @media screen and (min-width: $medium-gutter--min-width) {
       background-image: url(#{$image--path}/full-logo-verticial.png);
+      background-position: 5px center;
     }
 
-    @media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
-      background-size: 90%;
-    }
-
-    @media screen and (min-width: $large-gutter--min-width) {
-      background-image: url(#{$image--path}/full-logo-verticial.png);
+    @media screen and (min-width: 1200px) {
       background-size: 100%;
     }
+
+    //@media screen and (min-width: $medium-gutter--min-width) and (max-width: $medium-gutter--max-width) {
+    //  background-size: 90%;
+    //}
+    //
+    //@media screen and (min-width: $large-gutter--min-width) {
+    //  background-size: 100%;
+    //}
 
     margin: 0;
     text-indent: -9999px;

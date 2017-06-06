@@ -10,13 +10,17 @@
                 <a href="<?php echo $event_home_url; ?>/our-faculty" itemprop="url"><span itemprop="name">All-Star Teachers</span></a>
             </li>
             <li class="menu-item">
-                <a href="<?php echo $event_home_url; ?>/program-details" itemprop="url"><span itemprop="name">The Details</span></a>
+                <a href="<?php echo $event_home_url; ?>/program-details" itemprop="url"><span itemprop="name">Program Details and Pricing</span></a>
             </li>
             <li class="menu-item">
                 <a href="<?php echo $event_home_url; ?>/why-go" itemprop="url"><span itemprop="name">Why Go</span></a>
             </li>
             <li class="menu-item">
+            <?php if ( $current_iam_selection == 'developer' ) : ?>
+                <a href="<?php echo $event_home_url; ?>/career-development-focus" itemprop="url" class="button --career-development"><span itemprop="name">Career Development Focus</span></a>
+            <?php else: ?>
                 <a href="<?php echo $event_home_url; ?>/business-focus" itemprop="url" class="button --business"><span itemprop="name">Business Focus</span></a>
+            <?php endif; ?>
             </li>
             <li class="menu-item">
                 <a href="<?php echo $event_home_url; ?>/project-management-focus" itemprop="url" class="button --project-management"><span itemprop="name">Project Management Focus</span></a>

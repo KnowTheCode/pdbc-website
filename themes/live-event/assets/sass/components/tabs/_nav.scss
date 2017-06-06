@@ -23,7 +23,7 @@
   cursor: pointer;
   font-weight: 400;
   letter-spacing: 1px;
-  padding: 16px 24px;
+  padding: 16px 5px;
   width: auto;
   border-radius: 0;
 
@@ -33,6 +33,10 @@
     span {
       display: none;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 24px;
   }
 
   &:focus {
@@ -54,6 +58,10 @@
     border-color: $green;
   }
 
+  &:hover, &:focus, &:active {
+    background-color: $white;
+  }
+
   &[data-panel-state="active"] {
     background-color: $white;
     border-color: $darkBlue;
@@ -64,9 +72,5 @@
     @media screen and (max-width: 767px) {
       padding-bottom: 18px;
     }
-  }
-
-  &:hover {
-    background-color: $gray;
   }
 }

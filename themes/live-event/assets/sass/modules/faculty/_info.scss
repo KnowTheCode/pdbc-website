@@ -8,12 +8,18 @@
   .teacher-name {
     @include rem( font-size, 18px );
     text-align: left;
+    line-height: 1;
+    margin-bottom: 10px;
 
     @include media(768px) {
       @include rem( font-size, 20px );
     }
 
     @include media(1200px) {
+      @include rem( font-size, 22px );
+    }
+
+    @include media(1600px) {
       @include rem( font-size, 24px );
     }
   }

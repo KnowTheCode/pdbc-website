@@ -1,0 +1,49 @@
+.pricing-card {
+  text-align: center;
+  background-color: $white;
+  box-shadow: $pop--box-shadow;
+  margin-bottom: 30px;
+
+  &--who {
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      height: 3px;
+      width: 80px;
+      background-color: $darkBlue;
+    }
+
+    span {
+      font-size: 14px;
+      display: block;
+    }
+  }
+
+  &--price {
+    font-size: 200%;
+    color: $green;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-family: $heading-font-family;
+  }
+
+  &--currency {
+    font-size: 14px;
+    vertical-align: top;
+    top: 10px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &--discount {
+    font-size: 120%;
+    color: $red;
+    text-transform: uppercase;
+  }
+
+  //*** TEMPORARILY DISABLED THE BUTTON
+  .button {
+    pointer-events: none;
+  }
+}

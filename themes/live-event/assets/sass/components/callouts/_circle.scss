@@ -7,3 +7,31 @@
     margin-left: -63px;
   }
 }
+
+.circular-cta {
+  padding: 20px;
+  position: relative;
+  background-color: $lightOlive;
+  //display: table-cell;
+  //vertical-align: middle;
+  //text-align: center;
+
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &.--background-color {
+    &-blue {
+      background-color: $blue;
+    }
+  }
+}

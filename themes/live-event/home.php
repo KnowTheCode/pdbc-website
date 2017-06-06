@@ -34,6 +34,29 @@ function change_to_blog_title() {
 	return $page_for_posts->post_title;
 }
 
+add_filter( 'page_title_byline', __NAMESPACE__ . '\get_page_title_byline' );
+function get_page_title_byline() {
+	$page_for_posts = get_page_for_posts();
+	if ( ! $page_for_posts ) {
+		return;
+	}
+
+	return get_post_meta( $page_for_posts->ID, '_fulcrum_subtitle', true );
+}
+
+add_action( 'page_header_content', __NAMESPACE__ . '\render_page_header_content' );
+function render_page_header_content() {
+	$page_for_posts = get_page_for_posts();
+	if ( ! $page_for_posts ) {
+		return;
+	}
+
+	$content = get_post_meta( $page_for_posts->ID, '_fulcrum_header_content', true );
+	if ( $content ) {
+		echo do_shortcode( wpautop( $content ) );
+	}
+}
+
 /**
  * Get the page for posts object
  *
@@ -42,9 +65,16 @@ function change_to_blog_title() {
  * @return WP_Post|null
  */
 function get_page_for_posts() {
-	$post_id = get_option( 'page_for_posts' );
+	static $post_id = 0;
+	static $post;
 
-	return get_post( $post_id );
+	if ( ! $post_id ) {
+		$post_id = get_option( 'page_for_posts' );
+
+		$post = get_post( $post_id );
+	}
+
+	return $post;
 }
 
 /**

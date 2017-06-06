@@ -8,7 +8,6 @@
  * @link        https://KnowTheCode.io
  * @license     GPL-2.0+
  */
-
 namespace KnowTheCode\LiveEvent\Support;
 
 add_filter( 'stylesheet_uri', __NAMESPACE__ . '\change_stylesheet_uri_to_min' );

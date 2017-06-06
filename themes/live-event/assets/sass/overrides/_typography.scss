@@ -33,8 +33,9 @@
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
-$dataset_fontWeight: 100, 200, 300, 500, 600, 700, 800;
-@each $weight in $dataset_fontWeight {
+// adjust font weights
+@for $multiplier from 1 through 9 {
+  $weight: 100 * $multiplier;
   .--font-weight-#{$weight} {
     font-weight: $weight;
   }

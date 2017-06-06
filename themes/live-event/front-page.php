@@ -11,8 +11,6 @@
 
 namespace KnowTheCode\LiveEvent\FrontPage;
 
-use KnowTheCode\LiveEvent\Support as Support;
-
 remove_all_actions( 'genesis_entry_header' );
 remove_all_actions( 'genesis_entry_footer' );
 

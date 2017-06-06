@@ -24,6 +24,11 @@
   background-position: -7px -80px;
   width: 125px;
   height: 100px;
+  float: none;
+
+  @media screen and (min-width: 768px) {
+    float: left;
+  }
 }
 
 .icon--bullseye-content {

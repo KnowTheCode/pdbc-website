@@ -3,6 +3,10 @@
   color: $darkBlue;
   overflow: hidden;
 
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+  }
+
   &::after {
     opacity: 0;
     left: 50%;

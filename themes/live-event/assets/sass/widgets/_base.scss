@@ -2,6 +2,18 @@
 Widgets
 ---------------------------------------------------------------------------------------------------- */
 
+.widget {
+	margin-bottom: 50px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.widget .infobox {
+	margin: 0 auto;
+}
+
 // font sizing is set in base > elements > headings
 .widgettitle {
 	margin: 0 0 24px;

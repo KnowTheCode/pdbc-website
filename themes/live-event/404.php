@@ -8,7 +8,24 @@
  * @link        https://KnowTheCode.io
  * @license     GNU-2.0+
  */
-namespace KnowTheCode\LiveEvent;
+namespace KnowTheCode\LiveEvent\Template404;
+
+add_filter( 'genesis_site_layout', '__genesis_return_full_width_content', 999 );
+
+add_action( 'genesis_before', __NAMESPACE__ . '\relocate_entry_header' );
+/**
+ * Relocate the entry header to before the content-sidebar containers.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function relocate_entry_header() {
+	remove_all_actions( 'genesis_entry_header' );
+	remove_all_actions( 'genesis_entry_footer' );
+	remove_all_actions( 'genesis_after_header' );
+
+}
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_loop', __NAMESPACE__ . '\render_404' );

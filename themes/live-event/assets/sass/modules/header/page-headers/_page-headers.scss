@@ -8,6 +8,13 @@
   text-align: left;
   padding: 20px 0;
 
+  @media screen and (max-width: 600px) {
+    .button {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     background-color: $white;
     background-image: linear-gradient(rgba(255,255,255, 0.5) 100%, $white),
@@ -32,7 +39,7 @@
   }
 
   .wrap {
-    padding-top: 0;
+    padding-top: 90px;
     padding-bottom: 0;
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {

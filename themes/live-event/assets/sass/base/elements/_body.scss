@@ -12,8 +12,12 @@ body {
   font-family: $sans-serif;
 
   @include rem( font-size, $base-font-size--min );
-  @media screen and (min-width: $header-full-size--minwidth) {
+  @media screen and (min-width: $header-full-size--minwidth) and (max-width: 1499px) {
     @include rem( font-size, $base-font-size );
+  }
+
+  @media screen and (min-width: 1500px) {
+    @include rem( font-size, 20px );
   }
 
   -webkit-font-smoothing: antialiased;

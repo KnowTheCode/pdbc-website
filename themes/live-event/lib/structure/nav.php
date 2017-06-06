@@ -11,6 +11,8 @@
 
 namespace KnowTheCode\LiveEvent\Structure;
 
+use Fulcrum\Fulcrum;
+
 /**
  * Unregister default navigation events.
  *
@@ -34,6 +36,8 @@ add_action( 'genesis_header', __NAMESPACE__ . '\render_main_nav', 11 );
 function render_main_nav() {
 	$event_home_url = home_url();
 
+	$current_iam_selection = get_from_fulcrum( 'current_iam_selection' );
+
 	foreach ( array( 'hamburger', 'main-nav' ) as $filename ) {
 		$file = sprintf( '%s/views/nav/%s.php',
 			__DIR__,
@@ -44,6 +48,5 @@ function render_main_nav() {
 	}
 
 
-	require_once( __DIR__ . '/views/nav/main-nav.php' );
+//	require_once( __DIR__ . '/views/nav/main-nav.php' );
 }
-

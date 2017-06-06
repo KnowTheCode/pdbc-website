@@ -3,7 +3,7 @@
  * Autoload files to launch the theme.
  *
  * @package     KnowTheCode\LiveEvent\Support
- * @since       1.0.0
+ * @since       1.1.0
  * @author      hellofromTonya
  * @link        https://KnowTheCode.io
  * @license     GPL-2.0+
@@ -16,7 +16,7 @@ use KnowTheCode\LiveEvent\Admin\Metabox\Metabox;
 /**
  * Initialize the filenames to be loaded.
  *
- * @since 1.0.0
+ * @since 1.3.0
  *
  * @param bool $is_admin
  *
@@ -43,7 +43,7 @@ function init_files( $is_admin = false ) {
 /**
  * Load each of the specified files.
  *
- * @since 1.3.0
+ * @since 1.0.0
  *
  * @param array $filenames
  * @param string $folder_root
@@ -69,6 +69,36 @@ function do_autoload() {
 	$is_admin = is_admin();
 
 	init_files( $is_admin );
+}
+
+/**
+ * Get runtime configuration parameters.
+ *
+ * @since 1.3.0
+ *
+ * @param string $key Configuration parameter key
+ * @param string $config_file (Optional) Configuration filename without the extension.
+ *
+ * @return array|null|mixed
+ */
+function get_configuration_parameters( $key = '', $config_file = 'theme-setup' ) {
+	static $config = array();
+
+	if ( ! $config_file ) {
+		return;
+	}
+
+	if ( ! array_key_exists( $config_file, $config ) ) {
+		$config[ $config_file ] = (array) include( CHILD_THEME_DIR . '/config/' . $config_file . '.php' );
+	}
+
+	if ( ! $key ) {
+		return $config[ $config_file ];
+	}
+
+	if ( array_key_exists( $key, $config[ $config_file ] ) ) {
+		return $config[ $config_file ][ $key ];
+	}
 }
 
 do_autoload();

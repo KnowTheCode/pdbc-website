@@ -4,7 +4,8 @@ a.button,
 .entry-content a.button {
   &.--technical,
   &.--business,
-  &.--project-management {
+  &.--project-management,
+  &.--career-development {
     color: $darkBlue;
 
     &:hover {
@@ -39,6 +40,17 @@ a.button,
 
     &:hover {
       color: $colorPM;
+    }
+  }
+
+  &.--career-development {
+    border-color: $colorCareer;
+    background-color: $colorCareer;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $colorCareer;
     }
   }
 }

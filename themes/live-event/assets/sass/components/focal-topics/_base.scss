@@ -10,7 +10,7 @@
 
 .--color {
 
-  &-technical, &-business, &-project-management {
+  &-technical, &-business, &-project-management, &-career-development {
     color: $darkBlue;
     padding: 5px;
   }
@@ -25,6 +25,11 @@
 
   &-project-management {
     background-color: $colorPM;
+  }
+
+  &-career-development {
+    background-color: $colorCareer;
+    color: $white;
   }
 }
 
@@ -46,6 +51,16 @@ a.highlight {
 .boxed-grid--callout.--technical,
 .highlight.--technical {
   background-color: $colorTechnical;
+
+  h1,h2,h3,h4,h5,h6, p, .fa, .fa.make-a-point--icon, & {
+    color: $white;
+  }
+}
+
+.--career-development,
+.boxed-grid--callout.--career-development,
+.highlight.--career-development {
+  background-color: $colorCareer;
 
   h1,h2,h3,h4,h5,h6, p, .fa, .fa.make-a-point--icon, & {
     color: $white;
