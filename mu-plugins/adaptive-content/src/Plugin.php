@@ -36,6 +36,17 @@ class Plugin extends Addon {
 	protected $post_id = 0;
 
 	/**
+	 * Get the current I Am selection.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_current_selection() {
+		return $this->current_iam_selection;
+	}
+
+	/**
 	 * Initialize the events.
 	 *
 	 * @since 1.1.2
@@ -53,10 +64,30 @@ class Plugin extends Addon {
 
 		$this->init_the_current_selection();
 
-		add_action( 'rest_api_init', array( $this, 'init_rest_endpoint' ) );
+//		add_action( 'rest_api_init', array( $this, 'init_rest_endpoint' ) );
 		add_filter( 'body_class', array( $this, 'add_iam_to_body_class' ) );
 		add_action( 'genesis_before', array( $this, 'setup_the_hooks' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
+	}
+
+	/**
+	 * Initialize the current selection.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	protected function init_the_current_selection() {
+		$this->current_iam_selection = CookieHandler::get_the_cookie( $this->config->config['cookie_name'] );
+
+		if ( $this->current_iam_selection ) {
+			$this->current_iam_selection = trim( $this->current_iam_selection );
+
+		} else {
+			$this->current_iam_selection = $this->config->config['default'];
+		}
+
+		$this->fulcrum['current_iam_selection'] = $this->current_iam_selection;
 	}
 
 	/**
@@ -88,7 +119,8 @@ class Plugin extends Addon {
 			remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 			add_action( 'genesis_entry_content', array( $this, 'render_ux_iam_contents' ) );
 		}
-		add_action( 'genesis_header', array( $this, 'render_nav_button' ), 11 );
+//		add_action( 'genesis_header', array( $this, 'render_nav_button' ), 11 );
+		add_action( 'rendering_before_primary_nav_hamburger', array( $this, 'render_nav_button' ), 11 );
 		add_filter( 'genesis_attr_entry', array( $this, 'add_post_id_data_attr' ) );
 	}
 
@@ -201,25 +233,6 @@ class Plugin extends Addon {
 	/*********************
 	 * Helpers
 	 ********************/
-
-	/**
-	 * Initialize the current selection.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	protected function init_the_current_selection() {
-		$this->current_iam_selection = CookieHandler::get_the_cookie( $this->config->config['cookie_name'] );
-
-		if ( $this->current_iam_selection ) {
-			$this->current_iam_selection = trim( $this->current_iam_selection );
-
-		} else {
-
-			$this->current_iam_selection = $this->config->config['default'];
-		}
-	}
 
 	protected function get_developer_content() {
 		$developer_content = get_post_meta( $this->post_id, '_ux_developer_content', true );

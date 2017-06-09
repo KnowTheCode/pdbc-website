@@ -2,11 +2,12 @@
 --------------------------------------------- */
 
 .nav-primary {
-	text-align: center;
-	margin-top: -50px;
+	text-align: left;
+	overflow: auto;
+	height: 100%;
 
-	@media screen and (min-width: 1025px) {
-		margin-top: 0;
+	@media screen and (min-width: 768px) {
+		text-align: right;
 	}
 
 	.wrap {
@@ -15,7 +16,7 @@
 	}
 
 	a {
-		color: $darkBlue;
+		color: $white;
 	}
 
 	a:hover,
@@ -36,9 +37,20 @@
 		display: block;
 
 		@media screen and (min-width: 1025px) {
-			@include rem(font-size, 20px);
-			margin-bottom: 12px;
-			text-align: center;
+			@include rem(font-size, 18px);
+		}
+
+		a {
+			padding: 5px 10px;
+		}
+	}
+
+	.social-links {
+		margin-top: 40px;
+		text-align: left;
+
+		@media screen and (min-width: 1025px) {
+			margin-top: 20px;
 		}
 	}
 }

@@ -36,17 +36,32 @@ add_action( 'genesis_header', __NAMESPACE__ . '\render_main_nav', 11 );
 function render_main_nav() {
 	$event_home_url = home_url();
 
+//	$current_iam_selection = get_from_fulcrum( 'current_iam_selection' );
+//
+//	foreach ( array( 'hamburger', 'main-nav' ) as $filename ) {
+//		$file = sprintf( '%s/views/nav/%s.php',
+//			__DIR__,
+//			$filename
+//		);
+//
+//		require_once( $file );
+//	}
+
+
+	require( __DIR__ . '/views/nav/hamburger.php' );
+}
+
+add_action( 'genesis_after', __NAMESPACE__ . '\render_main_container', 20 );
+/**
+ * Render navigation.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function render_main_container() {
+	$event_home_url = home_url();
+
 	$current_iam_selection = get_from_fulcrum( 'current_iam_selection' );
-
-	foreach ( array( 'hamburger', 'main-nav' ) as $filename ) {
-		$file = sprintf( '%s/views/nav/%s.php',
-			__DIR__,
-			$filename
-		);
-
-		require_once( $file );
-	}
-
-
-//	require_once( __DIR__ . '/views/nav/main-nav.php' );
+	require_once( __DIR__ . '/views/nav/main-nav.php' );
 }

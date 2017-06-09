@@ -12,7 +12,7 @@ namespace KnowTheCode\FulcrumSite\Structure;
 
 add_action( 'page_header_content', __NAMESPACE__ . '\render_page_header_content' );
 function render_page_header_content() {
-	if ( ! is_page() ) {
+	if ( is_front_page() || is_home() ) {
 		return;
 	}
 
@@ -27,12 +27,26 @@ function render_page_header_content() {
 	}
 }
 
+/**
+ * Description.
+ *
+ * @since 1.0.0
+ *
+ * @param $meta_key
+ * @param bool $post_id
+ *
+ * @return void
+ */
 function get_page_header_meta( $meta_key, $post_id = false ) {
 	static $post_id = false;
 	static $meta_store = array();
 
 	if ( $post_id === false ) {
 		$post_id = get_the_ID();
+	}
+
+	if ( ! $post_id ) {
+		return;
 	}
 
 	if ( ! array_key_exists( $post_id, $meta_store ) ) {

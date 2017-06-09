@@ -16,7 +16,9 @@
   }
 }
 
-.title-area, .hamburger-container, .iam-picker--open-button {
+.title-area,
+.hamburger-container,
+.getmytickets--container {
   height: 94px;
   @media screen and (min-width: $header-fixed--min-width) {
     position: fixed;
@@ -46,7 +48,7 @@
 
 .site-title,
 .hamburger--button,
-.iam-picker--open-button {
+.getmytickets--container {
   position: absolute;
   top: 0;
   z-index: 99;

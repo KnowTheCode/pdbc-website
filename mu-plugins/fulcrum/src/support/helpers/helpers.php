@@ -10,6 +10,58 @@
  * @license     GNU General Public License 2.0+
  */
 
+if ( ! function_exists( 'get_fulcrum' ) ) {
+	/**
+	 * Returns Fulcrum instance.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return \Fulcrum\Fulcrum_Contract
+	 */
+	function get_fulcrum() {
+		return \Fulcrum\Fulcrum::getFulcrum();
+	}
+}
+
+if ( ! function_exists( 'fulcrum_has' ) ) {
+	/**
+	 * Checks if a value exists in the Container.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $key Key to check for.
+	 *
+	 * @returns void
+	 */
+	function fulcrum_has( $key ) {
+		$fulcrum = get_fulcrum();
+
+		return $fulcrum->has( $key );
+	}
+}
+
+if ( ! function_exists( 'get_from_fulcrum' ) ) {
+	/**
+	 * Returns an instance or value from Fulcrum, if
+	 * it exists in the Container.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $key Key to check for.
+	 *
+	 * @returns mixed
+	 */
+	function get_from_fulcrum( $key ) {
+		$fulcrum = get_fulcrum();
+
+		if ( ! $fulcrum->has( $key ) ) {
+			return;
+		}
+
+		return $fulcrum[ $key ];
+	}
+}
+
 if ( ! function_exists( 'fulcrum_prevent_direct_file_access' ) ) {
 	/**
 	 * Checks if the file is being accessed directly. If

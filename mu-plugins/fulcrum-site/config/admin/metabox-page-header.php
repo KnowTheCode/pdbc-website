@@ -12,7 +12,7 @@
 namespace KnowTheCode\FulcrumSite\Admin\Metabox;
 
 $prefix     = 'ktc_page_header';
-$post_types = array( 'page' );
+$post_types = array( 'post', 'page' );
 
 $metadata = include( FULCRUM_SITE_PLUGIN_DIR . 'config/metadata/page-header.php' );
 

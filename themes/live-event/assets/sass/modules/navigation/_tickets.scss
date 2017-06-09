@@ -1,0 +1,43 @@
+.getmytickets--container {
+  // positioning is in header/site-header/_positioning.scss
+  right: 70px;
+
+  //right: 0;
+
+  padding: 10px 10px;
+  border-bottom: 0;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    right: 80px;
+  }
+}
+
+.getmytickets--button {
+  height: 80px;
+  overflow: hidden;
+  font-size: 13px;
+
+  color: $red;
+
+  &:hover {
+    color: $green;
+  }
+
+  //border-bottom: 0;
+
+  .fa {
+    font-size: 40px;
+    line-height: 40px;
+    display: block;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.getmytickets--caption {
+  //display: block;
+
+}
