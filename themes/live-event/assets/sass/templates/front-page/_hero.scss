@@ -8,8 +8,7 @@
   @media screen and (min-width: 768px) {
     background-color: $white;
 
-    background-image: linear-gradient(rgba( $white, 0.3) 100%, $white),
-        url(#{$image--path}/rising-line.svg),
+    background-image: linear-gradient(rgba(255,255,255, 0.65) 100%, $white),
         url(#{$image--path}/profitable-developer-bootcamp-hero.png);
 
     background-position: bottom;
@@ -30,7 +29,7 @@
     }
 
     @media screen and (min-width: 1200px) and (max-width: 1499px) {
-      padding-top: 130px;
+      padding-top: 110px;
     }
 
     @media screen and (min-width: 1500px) {
@@ -53,7 +52,11 @@
       @include rem( font-size, 30px );
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) and (max-width: 1499px) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: 1500px) {
       margin-bottom: 15%;
     }
 
