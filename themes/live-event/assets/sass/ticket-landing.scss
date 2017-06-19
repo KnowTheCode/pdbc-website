@@ -1,0 +1,14 @@
+/*!
+  Ticket Landing Stylesheet
+
+  Version: 1.0.0
+
+*/
+
+
+// CSS path dist/css/
+$image--path: '../../images';
+
+@import 'base-stuff';
+
+@import "templates/ticket-landing/index";

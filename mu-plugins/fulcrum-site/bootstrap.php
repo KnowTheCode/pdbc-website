@@ -80,6 +80,7 @@ function load_dependencies() {
 	$filenames = array(
 		'src/Shortcode/InfoBox.php',
 		'src/Shortcode/QA.php',
+		'src/Shortcode/Vimeo.php',
 
 		'src/Widget/GetOnListWidget.php',
 

@@ -155,6 +155,13 @@ function change_the_read_more_link( $html ) {
 }
 
 add_action( 'genesis_after_entry', __NAMESPACE__ . '\render_after_entry', 7 );
+/**
+ * After entry components.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function render_after_entry() {
 	if ( ! is_single() ) {
 		return;

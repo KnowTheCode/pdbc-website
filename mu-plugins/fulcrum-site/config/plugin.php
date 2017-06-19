@@ -44,6 +44,10 @@ return array(
 			'provider' => 'provider.asset',
 			'config'   => FULCRUM_SITE_PLUGIN_DIR . 'config/assets/font-awesome.php',
 		),
+		'script.fitvids'         => array(
+			'provider' => 'provider.asset',
+			'config'   => FULCRUM_SITE_PLUGIN_DIR . 'config/assets/fitvids.php',
+		),
 		// This is the minified live site scripts
 		'script.fulcrum_site'   => array(
 			'provider' => 'provider.asset',
@@ -64,6 +68,10 @@ return array(
 		'shortcode.qa'  => array(
 			'provider' => 'provider.shortcode',
 			'config'   => FULCRUM_SITE_PLUGIN_DIR . 'config/shortcodes/qa.php',
+		),
+		'shortcode.vimeo'  => array(
+			'provider' => 'provider.shortcode',
+			'config'   => FULCRUM_SITE_PLUGIN_DIR . 'config/shortcodes/vimeo.php',
 		),
 
 		/****************************

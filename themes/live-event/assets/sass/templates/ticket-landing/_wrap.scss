@@ -1,0 +1,12 @@
+//
+// We need some extra wrap styles here
+//=====================================
+
+body.ticket-landing {
+  .footer-widgets,
+  .site-footer {
+    .wrap {
+      @include wrapper();
+    }
+  }
+}

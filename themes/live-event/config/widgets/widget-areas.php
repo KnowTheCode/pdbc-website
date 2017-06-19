@@ -43,6 +43,11 @@ return array(
 			'description' => __( 'This sidebar is holding the sponsorship widgets', 'live-event' ),
 		),
 		array(
+			'id'          => 'discover-bootcamp',
+			'name'        => __( 'Discover Bootcamp', 'live-event' ),
+			'description' => __( 'This sidebar will appear at the bottom of all pages for the bottom embedded navigation menu.', 'live-event' ),
+		),
+		array(
 			'id'          => 'architect-sponsors',
 			'name'        => __( 'Architect Sponsors', 'live-event' ),
 			'description' => __( 'This sidebar is architect sponsor above-the-fold area.', 'live-event' ),
